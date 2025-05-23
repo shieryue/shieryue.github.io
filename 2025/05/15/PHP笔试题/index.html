@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>PHP笔试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="九九乘法表 for 实现：123456for($i&#x3D;1;$i&lt;10;$i++)&#123;	for($j&#x3D;1;$j&lt;&#x3D;$i;$j++)&#123;		echo $i.&#x27;*&#x27;.$j.&#x27;&#x3D;&#x27;.$i*$j.&#x27;   &#x27;;	&#125;	echo &#x27;&lt;br &#x2F;&gt;&#x27;;&#125;  [‘a’, ‘b’, ‘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP笔试题">
+<meta property="og:url" content="http://example.com/2025/05/15/PHP%E7%AC%94%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="九九乘法表 for 实现：123456for($i&#x3D;1;$i&lt;10;$i++)&#123;	for($j&#x3D;1;$j&lt;&#x3D;$i;$j++)&#123;		echo $i.&#x27;*&#x27;.$j.&#x27;&#x3D;&#x27;.$i*$j.&#x27;   &#x27;;	&#125;	echo &#x27;&lt;br &#x2F;&gt;&#x27;;&#125;  [‘a’, ‘b’, ‘">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-15T03:11:58.000Z">
+<meta property="article:modified_time" content="2025-05-23T14:59:37.480Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-PHP笔试题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/05/15/PHP%E7%AC%94%E8%AF%95%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2025-05-15T03:11:58.000Z" itemprop="datePublished">2025-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      PHP笔试题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="九九乘法表-for-实现："><a href="#九九乘法表-for-实现：" class="headerlink" title="九九乘法表 for 实现："></a>九九乘法表 for 实现：</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">1</span>;<span class="variable">$i</span>&lt;<span class="number">10</span>;<span class="variable">$i</span>++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="variable">$j</span>=<span class="number">1</span>;<span class="variable">$j</span>&lt;=<span class="variable">$i</span>;<span class="variable">$j</span>++)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="variable">$i</span>.<span class="string">&#x27;*&#x27;</span>.<span class="variable">$j</span>.<span class="string">&#x27;=&#x27;</span>.<span class="variable">$i</span>*<span class="variable">$j</span>.<span class="string">&#x27;   &#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;br /&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="‘a’-‘b’-‘c’-转成’abc’"><a href="#‘a’-‘b’-‘c’-转成’abc’" class="headerlink" title="[‘a’, ‘b’, ‘c’]转成’abc’"></a>[‘a’, ‘b’, ‘c’]转成’abc’</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">implode</span>(<span class="string">&#x27;&#x27;</span>, [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>]);</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">join</span>([<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="获取’aAbB’中A首次出现的位置"><a href="#获取’aAbB’中A首次出现的位置" class="headerlink" title="获取’aAbB’中A首次出现的位置"></a>获取’aAbB’中A首次出现的位置</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$str</span>=<span class="string">&#x27;aAbB&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">strpos</span>(<span class="variable">$str</span>, <span class="string">&#x27;A&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="字符串反序，将‘1234567890’-转换成-‘0987654321’"><a href="#字符串反序，将‘1234567890’-转换成-‘0987654321’" class="headerlink" title="字符串反序，将‘1234567890’ 转换成 ‘0987654321’"></a>字符串反序，将‘1234567890’ 转换成 ‘0987654321’</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.使用函数</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">&#x27;1234567890&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">strrev</span>(<span class="variable">$str</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.不使用函数</span></span><br><span class="line"><span class="variable">$newStr</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="variable">$i</span> = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (<span class="keyword">isset</span>(<span class="variable">$str</span>[<span class="variable">$i</span>]) &amp;&amp; <span class="variable">$str</span>[<span class="variable">$i</span>] != <span class="literal">null</span>) &#123;</span><br><span class="line">	<span class="variable">$newStr</span> = <span class="variable">$str</span>[<span class="variable">$i</span>++] . <span class="variable">$newStr</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$newStr</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="用递归求阶乘"><a href="#用递归求阶乘" class="headerlink" title="用递归求阶乘"></a>用递归求阶乘</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"><span class="variable">$n</span></span>) </span>&#123;</span><br><span class="line">	<span class="comment">// 基本情况：如果n为0或1，则返回1</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$n</span> == <span class="number">0</span> || <span class="variable">$n</span> == <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="variable">$n</span> * <span class="title function_ invoke__">F</span>(<span class="variable">$n</span> - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">F</span>(<span class="number">5</span>);	<span class="comment">// 120</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="将字符长fang-zhi-gang-转化为驼峰法的形式：FangZhiGang"><a href="#将字符长fang-zhi-gang-转化为驼峰法的形式：FangZhiGang" class="headerlink" title="将字符长fang-zhi-gang 转化为驼峰法的形式：FangZhiGang"></a>将字符长fang-zhi-gang 转化为驼峰法的形式：FangZhiGang</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"><span class="variable">$str</span></span>)</span>&#123;  </span><br><span class="line">	<span class="variable">$arr</span> = <span class="title function_ invoke__">explode</span>(<span class="string">&#x27;-&#x27;</span>, <span class="variable">$str</span>);   </span><br><span class="line">	<span class="variable">$str</span> = <span class="title function_ invoke__">implode</span>(<span class="string">&#x27; &#x27;</span>, <span class="variable">$arr</span>);   </span><br><span class="line">	<span class="variable">$str</span> = <span class="title function_ invoke__">ucwords</span>(<span class="variable">$str</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot; &quot;</span>, <span class="string">&quot;&quot;</span>, <span class="variable">$str</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title function_ invoke__">F</span>(<span class="string">&quot;fang-zhi-gang&quot;</span>)); <span class="comment">//FangZhiGang</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="数组内置的排序方法有哪些？"><a href="#数组内置的排序方法有哪些？" class="headerlink" title="数组内置的排序方法有哪些？"></a>数组内置的排序方法有哪些？</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">sort</span>(<span class="variable">$array</span>);	<span class="comment">//数组升序排序</span></span><br><span class="line"><span class="title function_ invoke__">rsort</span>(<span class="variable">$array</span>);	<span class="comment">//数组降序排序</span></span><br><span class="line"> </span><br><span class="line"><span class="title function_ invoke__">asort</span>(<span class="variable">$array</span>);	<span class="comment">//根据值，以升序对关联数组进行排序</span></span><br><span class="line"><span class="title function_ invoke__">ksort</span>(<span class="variable">$array</span>);	<span class="comment">//根据建，以升序对关联数组进行排序</span></span><br><span class="line"> </span><br><span class="line"><span class="title function_ invoke__">arsort</span>(<span class="variable">$array</span>);	<span class="comment">//根据值，以降序对关联数组进行排序</span></span><br><span class="line"><span class="title function_ invoke__">krsort</span>(<span class="variable">$array</span>);	<span class="comment">//根据键，以降序对关联数组进行排序</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="客户端IP与服务器IP"><a href="#客户端IP与服务器IP" class="headerlink" title="客户端IP与服务器IP"></a>客户端IP与服务器IP</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$_SERVER</span>[<span class="string">&quot;REMOTE_ADDR&quot;</span>]</span><br><span class="line"><span class="variable">$_SERVER</span>[<span class="string">&quot;SERVER_ADDR&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<h1 id="不使用第三个变量实现交换两个变量的值"><a href="#不使用第三个变量实现交换两个变量的值" class="headerlink" title="不使用第三个变量实现交换两个变量的值"></a>不使用第三个变量实现交换两个变量的值</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">list</span>(<span class="variable">$b</span>, <span class="variable">$a</span>) = <span class="keyword">array</span>(<span class="variable">$a</span>, <span class="variable">$b</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="获取文件的扩展名"><a href="#获取文件的扩展名" class="headerlink" title="获取文件的扩展名"></a>获取文件的扩展名</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span>(<span class="params"><span class="variable">$file</span></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="title function_ invoke__">end</span>(<span class="title function_ invoke__">explode</span>(<span class="string">&#x27;.&#x27;</span>, <span class="variable">$file</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">get_extension</span>(<span class="string">&#x27;test.php&#x27;</span>); <span class="comment">//php</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="打印出前一天的时间格式是2017-3-22-22-21-21"><a href="#打印出前一天的时间格式是2017-3-22-22-21-21" class="headerlink" title="打印出前一天的时间格式是2017-3-22 22:21:21"></a>打印出前一天的时间格式是2017-3-22 22:21:21</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">date</span>(<span class="string">&quot;Y-m-d H:i:s&quot;</span>, <span class="title function_ invoke__">strtotime</span>(<span class="string">&quot;-1 days&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<h1 id="用header-函数实现页面404错误提示"><a href="#用header-函数实现页面404错误提示" class="headerlink" title="用header()函数实现页面404错误提示"></a>用header()函数实现页面404错误提示</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;HTTP/1.1 404 Not Found&quot;</span>); <span class="comment">// 设置HTTP状态码为404</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="PHP-数组在底层的实现原理"><a href="#PHP-数组在底层的实现原理" class="headerlink" title="PHP 数组在底层的实现原理"></a>PHP 数组在底层的实现原理</h1><p>PHP数组在底层的实现原理可以分为两种类型：基于哈希表的实现和基于有序列表的实现。</p>
+<h2 id="1、基于哈希表的实现"><a href="#1、基于哈希表的实现" class="headerlink" title="1、基于哈希表的实现"></a>1、基于哈希表的实现</h2><p>PHP 数组的基于哈希表的实现是指，在内部实现中，PHP 使用了哈希表来实现数组的存储和访问操作。</p>
+<p>哈希表是一种数据结构，它可以将元素存储在数组中，并通过一个哈希函数将元素的键映射到数组的索引位置。哈希函数的作用是将任意长度的输入数据（即键）映射为固定长度的哈希值，并将该哈希值作为索引。</p>
+<p>在 PHP 数组中，键值对被存储在一个桶中，每个桶可以包含一个或多个键值对。当要访问一个特定的键值对时，PHP 会先使用哈希函数来计算该键对应的哈希值，然后根据该哈希值找到对应的桶，最后再在桶内进行线性搜索，直到找到对应的键值对。</p>
+<p>这种基于哈希表的实现具有快速的查找速度，但会占用更多的内存。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空的数组</span></span><br><span class="line"><span class="variable">$myarray</span> = <span class="keyword">array</span>();</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 向数组中添加键值对</span></span><br><span class="line"><span class="variable">$myarray</span>[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="variable">$myarray</span>[<span class="string">&quot;age&quot;</span>] = <span class="number">20</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 访问数组的元素</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;姓名：&quot;</span> . <span class="variable">$myarray</span>[<span class="string">&quot;name&quot;</span>] . <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;年龄：&quot;</span> . <span class="variable">$myarray</span>[<span class="string">&quot;age&quot;</span>] . <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用了 <code>$myarray</code> 哈希表来存储数组元素。每个元素都被存储在一个桶中，并通过一个哈希函数将键映射到桶的索引位置。在访问数组元素时，可以通过键值直接访问对应的桶，从而快速地找到元素。</p>
+<h2 id="2、基于有序列表的实现"><a href="#2、基于有序列表的实现" class="headerlink" title="2、基于有序列表的实现"></a>2、基于有序列表的实现</h2><p>PHP 数组的基于有序列表的实现是指，在内部实现中，PHP 使用了双向链表来实现数组的存储和访问操作。</p>
+<p>在这种实现方式中，每个键值对被存储在一个节点中，节点之间通过指针连接，构成一个双向链表。同时，还会按照键的顺序进行排序，以方便查找和遍历。</p>
+<p>在访问数组元素时，PHP 会先使用二分查找算法来查找对应的键值对，然后再返回相应的值。由于数组是有序的，因此二分查找的效率非常高。</p>
+<p>这种基于有序列表的实现具有较低的内存占用，但在插入和删除元素时可能会比较耗时。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空的数组</span></span><br><span class="line"><span class="variable">$myarray</span> = <span class="keyword">array</span>();</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 向数组中添加键值对</span></span><br><span class="line"><span class="variable">$myarray</span>[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="variable">$myarray</span>[<span class="string">&quot;age&quot;</span>] = <span class="number">20</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 按照键的顺序遍历数组</span></span><br><span class="line"><span class="title function_ invoke__">ksort</span>(<span class="variable">$myarray</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$myarray</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;<span class="subst">$key</span> =&gt; <span class="subst">$value</span> &lt;br&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 查找数组中的元素</span></span><br><span class="line"><span class="variable">$search_key</span> = <span class="string">&quot;name&quot;</span>;</span><br><span class="line"><span class="variable">$index</span> = <span class="title function_ invoke__">binary_search</span>(<span class="variable">$myarray</span>, <span class="variable">$search_key</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$index</span> !== <span class="literal">false</span>) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;元素 &#x27;<span class="subst">$search_key</span>&#x27; 的值为：&quot;</span> . <span class="variable">$myarray</span>[<span class="variable">$search_key</span>] . <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;元素 &#x27;<span class="subst">$search_key</span>&#x27; 不存在&lt;br&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 二分查找算法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binary_search</span>(<span class="params"><span class="variable">$array</span>, <span class="variable">$key</span></span>) </span>&#123;</span><br><span class="line">    <span class="variable">$low</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="variable">$high</span> = <span class="title function_ invoke__">count</span>(<span class="variable">$array</span>) - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (<span class="variable">$low</span> &lt;= <span class="variable">$high</span>) &#123;</span><br><span class="line">        <span class="variable">$mid</span> = <span class="title function_ invoke__">intval</span>((<span class="variable">$low</span> + <span class="variable">$high</span>) / <span class="number">2</span>);</span><br><span class="line">        <span class="variable">$mid_key</span> = <span class="title function_ invoke__">array_keys</span>(<span class="variable">$array</span>)[<span class="variable">$mid</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$mid_key</span> == <span class="variable">$key</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$mid</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable">$mid_key</span> &lt; <span class="variable">$key</span>) &#123;</span><br><span class="line">            <span class="variable">$low</span> = <span class="variable">$mid</span> + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable">$high</span> = <span class="variable">$mid</span> - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用了 $myarray 双向链表来存储数组元素，并按照键的顺序进行了排序。在遍历数组时，可以直接按照节点的顺序进行遍历。在查找数组元素时，可以使用二分查找算法来在有序列表中查找对应的节点，从而快速地找到元素。</p>
+<p>总结：</p>
+<p>无论使用哪种底层实现方式，PHP 数组都是非常方便和实用的数据结构。底层实现的选择取决于应用场景和需求。如果需要快速的查找操作，可以选择基于哈希表的实现，如果需要较低的内存消耗，则可以选择基于有序列表的实现。</p>
+<h1 id="1-2-3-…-99-100"><a href="#1-2-3-…-99-100" class="headerlink" title="1+2+3+…+99+100&#x3D;()"></a>1+2+3+…+99+100&#x3D;()</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法1：使用循环</span></span><br><span class="line"><span class="variable">$sum</span> = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">1</span>; <span class="variable">$i</span> &lt;= <span class="number">100</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">	<span class="variable">$sum</span> += <span class="variable">$i</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$sum</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法2：使用等差数列求和公式</span></span><br><span class="line"><span class="comment">// 已知首项和末项时：直接使用Sₙ = n(a₁ + aₙ)/2，计算效率更高</span></span><br><span class="line"><span class="variable">$sum</span> = (<span class="number">100</span> * (<span class="number">1</span> + <span class="number">100</span>)) / <span class="number">2</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$sum</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法3：使用range函数和array_sum函数</span></span><br><span class="line"><span class="variable">$numbers</span> = <span class="title function_ invoke__">range</span>(<span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line"><span class="variable">$sum</span> = <span class="title function_ invoke__">array_sum</span>(<span class="variable">$numbers</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$sum</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法4：使用递归（不推荐，除非有特殊需求）</span></span><br><span class="line"><span class="comment">// 虽然递归通常不是求和的最佳选择（因为它可能导致栈溢出或效率问题），但为了完整性，这里也展示一个递归方法：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"><span class="variable">$n</span></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$n</span> == <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="variable">$n</span> + <span class="title function_ invoke__">sum</span>(<span class="variable">$n</span> - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">sum</span>(<span class="number">100</span>); <span class="comment">// 这将计算从1到100的和。但请注意，这并不是最高效的方法。</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="你该怎样优化这段代码？"><a href="#你该怎样优化这段代码？" class="headerlink" title="你该怎样优化这段代码？"></a>你该怎样优化这段代码？</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?</span></span><br><span class="line">	<span class="keyword">echo</span>(<span class="string">&quot;&lt;p&gt;Search results for query: &quot;</span> . <span class="variable">$_GET</span>[<span class="string">&#x27;query&#x27;</span>] . <span class="string">&quot;.&lt;/p&gt;&quot;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;query&#x27;</span>])) &#123; </span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;p&gt;Search results for query: &#x27;</span>,</span><br><span class="line">	<span class="title function_ invoke__">htmlspecialchars</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;query&#x27;</span>], ENT_QUOTES), <span class="string">&#x27;.&lt;/p&gt;&#x27;</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>能写出这样代码的人，99%可以被录用。理由如下： </p>
+<ul>
+<li><?被替换成了<?php，这样更符合 XML 规范。 
+</li>
+<li><p>在输出$_GET[‘query’]的值之前先判断它是否为空。 </p>
+</li>
+<li><p>echo 命令中多余的括号被去掉了。 </p>
+</li>
+<li><p>字符串用单引号限定，从而节省了 PHP 从字符串中搜索可替换的变量的时间。 </p>
+</li>
+<li><p>用逗号代替句号，节省了 echo 的时间。 </p>
+</li>
+<li><p>将 ENT_QUOTES 标识传递给 htmlspecialchars 函数，从而保证单引号也会被转义。虽然这并是最</p>
+</li>
+</ul>
+<p>主要的，但也算是一个良好习惯。</p>
+<h1 id="获取客户端和服务器端的-IP-地址？"><a href="#获取客户端和服务器端的-IP-地址？" class="headerlink" title="获取客户端和服务器端的 IP 地址？"></a>获取客户端和服务器端的 IP 地址？</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">本题考核面试者对 PHP 网络函数的掌握程度，以及扩展能力。获取客户端和服务器端 IP 地址可以通</span><br><span class="line">过 <span class="title function_ invoke__">getenv</span>()函数来实现。但是，如果是获取指定域名的 IP 地址，那么就需要使用 <span class="title function_ invoke__">gethostbyname</span>()函数。</span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">getenv</span>(<span class="string">&#x27;REMOTE_ADDR&#x27;</span>); <span class="comment">//获取客户端 IP 地址 $_SERVER[&#x27;REMOTE_ADDR&#x27;]</span></span><br><span class="line"><span class="title function_ invoke__">getenv</span>(<span class="string">&#x27;SERVER_ADDR&#x27;</span>); <span class="comment">//获取服务器端 IP 地址 $_SERVER[&#x27;SERVER_ADDR&#x27;]</span></span><br><span class="line"><span class="title function_ invoke__">gethostbyname</span>(<span class="string">&#x27;www.mingribook.com&#x27;</span>); <span class="comment">//获取指定域名的 IP 地址</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="如何实现-PHP-与-JSP-的交互？"><a href="#如何实现-PHP-与-JSP-的交互？" class="headerlink" title="如何实现 PHP 与 JSP 的交互？"></a>如何实现 PHP 与 JSP 的交互？</h1><p>通过 SOAP、XML_RPC、Socket function 或者 CURL </p>
+<p>都可以实现 PHP 与 JSP 的交互。如果是考 PHP 和 Java 的整合，则可以通过 PHP 内置的机制（如果考 PHP </p>
+<p>和.NET 的整合，也可以这么回答），例如$php_java &#x3D; new Java(‘java.lang.System’);。</p>
+<h1 id="开启-php-ini-文件中-safe-mode-选项，会影响到哪些函数的应用？至少说出-4-个"><a href="#开启-php-ini-文件中-safe-mode-选项，会影响到哪些函数的应用？至少说出-4-个" class="headerlink" title="开启 php.ini 文件中 safe_mode 选项，会影响到哪些函数的应用？至少说出 4 个"></a>开启 php.ini 文件中 safe_mode 选项，会影响到哪些函数的应用？至少说出 4 个</h1><p>pathinfo()、basename()、fopen()和 exec()等函数。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/05/15/PHP%E7%AC%94%E8%AF%95%E9%A2%98/" data-id="cmb0yxkq40003q8umcvaieomy" data-title="PHP笔试题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/05/15/%E9%9D%A2%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/05/15/PHP%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PHP面试题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">May 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/05/15/Memcached%E9%9D%A2%E8%AF%95%E9%A2%98/">Memcached面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/">Redis面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/">Nginx面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">MySQL面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/%E9%9D%A2%E8%AF%95/">面试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Redis面试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="redis消息队列先进先出需要注意什么?答:通常使用一个list来实现队列操作，这样有一个小限制，所以的任务统一都是先进先出，如果想优先处理某个任务就不太好处理了，这就需要让队列有优先级的概念，我们就可以优先处理高级别的任务，实现方式有以下几种方式： 1）单一列表实现：队列正常的操作是 左进右出（lpush,rpop）为了先处理高优先级任务，在遇到高级别任务时，可以直接插队，直接放入队列头部（rp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis面试题">
+<meta property="og:url" content="http://example.com/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="redis消息队列先进先出需要注意什么?答:通常使用一个list来实现队列操作，这样有一个小限制，所以的任务统一都是先进先出，如果想优先处理某个任务就不太好处理了，这就需要让队列有优先级的概念，我们就可以优先处理高级别的任务，实现方式有以下几种方式： 1）单一列表实现：队列正常的操作是 左进右出（lpush,rpop）为了先处理高优先级任务，在遇到高级别任务时，可以直接插队，直接放入队列头部（rp">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-15T04:07:46.000Z">
+<meta property="article:modified_time" content="2025-05-15T04:32:32.719Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Redis面试题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2025-05-15T04:07:46.000Z" itemprop="datePublished">2025-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Redis面试题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="redis消息队列先进先出需要注意什么"><a href="#redis消息队列先进先出需要注意什么" class="headerlink" title="redis消息队列先进先出需要注意什么?"></a>redis消息队列先进先出需要注意什么?</h1><p>答:通常使用一个list来实现队列操作，这样有一个小限制，所以的任务统一都是先进先出，如果想优先处理某个任务就不太好处理了，这就需要让队列有优先级的概念，我们就可以优先处理高级别的任务，实现方式有以下几种方式：</p>
+<p>1）单一列表实现：队列正常的操作是 左进右出（lpush,rpop）为了先处理高优先级任务，在遇到高级别任务时，可以直接插队，直接放入队列头部（rpush），这样，从队列头部（右侧）获取任务时，取到的就是高优先级的任务（rpop）</p>
+<p>2）使用两个队列，一个普通队列，一个高级队列，针对任务的级别放入不同的队列，获取任务时也很简单，redis的BRPOP命令可以按顺序从多个队列中取值，BRPOP会按照给出的 key 顺序查看，并在找到的第一个非空 list 的尾部弹出一个元素，redis&gt; BRPOP list1 list2 0</p>
+<p>list1 做为高优先级任务队列</p>
+<p>list2 做为普通任务队列 </p>
+<p>这样就实现了先处理高优先级任务，当没有高优先级任务时，就去获取普通任务 </p>
+<p>方式1最简单，但实际应用比较局限，方式3可以实现复杂优先级，但实现比较复杂，不利于维护 </p>
+<p>方式2是推荐用法，实际应用最为合适</p>
+<h1 id="Redis如何防止高并发"><a href="#Redis如何防止高并发" class="headerlink" title="Redis如何防止高并发?"></a>Redis如何防止高并发?</h1><p>答：其实redis是不会存在并发问题的，因为他是单进程的，再多的命令都是一个接一个地执行的。我们使用的时候，可能会出现并发问题，比如获得和设定这一对。Redis的为什么 有高并发问题？Redis的的出身决定</p>
+<p>Redis是一种单线程机制的nosql数据库，基于key-value，数据可持久化落盘。由于单线程所以redis本身并没有锁的概念，多个客户端连接并不存在竞争关系，但是利用jedis等客户端对redis进行并发访问时会出现问题。发生连接超时、数据转换错误、阻塞、客户端关闭连接等问题，这些问题均是由于客户端连接混乱造成。</p>
+<p>同时，单线程的天性决定，高并发对同一个键的操作会排队处理，如果并发量很大，可能造成后来的请求超时。</p>
+<p>在远程访问redis的时候，因为网络等原因造成高并发访问延迟返回的问题。</p>
+<p>解决办法</p>
+<p>在客户端将连接进行池化，同时对客户端读写Redis操作采用内部锁synchronized。</p>
+<p>服务器角度，利用setnx变向实现锁机制。</p>
+<h1 id="redis和Memcached的区别到底是什么？"><a href="#redis和Memcached的区别到底是什么？" class="headerlink" title="redis和Memcached的区别到底是什么？"></a>redis和Memcached的区别到底是什么？</h1><ol>
+<li>Redis是一个开源的内存数据结构存储，用作数据库，缓存和消息代理；</li>
+<li>Memcached是一个免费的开源高性能分布式内存对象缓存系统，它通过减少数据库负载来加速动态Web应用程序。</li>
+<li>Redis与Memcached相比，比仅支持简单的key-value数据类型，同时还提供list,set,zset,hash等数据结构的存储；redis支持数据的备份，redis支持数据的持久化，</li>
+<li>总体来讲，TPS方面redis和memcache差不多，要大于mongodb。</li>
+<li>内存使用效率对比：</li>
+</ol>
+<p>　　　　使用简单的key-value存储的话， Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。</p>
+<ol>
+<li>数据结构</li>
+</ol>
+<p>　　　　Redis支持字符串，散列，列表，集合，有序集，位图，超级日志和空间索引；而Memcached支持字符串和整数。</p>
+<ol>
+<li>执行速度</li>
+</ol>
+<p>　　　　Memcached的读写速度高于Redis。</p>
+<ol>
+<li>Redis是单线程的；而Memcached是多线程的。</li>
+<li>数据一致性（事务支持）</li>
+</ol>
+<p>　　　　Memcache 在并发场景下，用cas保证一致性</p>
+<p>　　　　redis事务支持比较弱，只能保证事务中的每个操作连续执行</p>
+<p>　　　　mongoDB不支持事务</p>
+<h1 id="什么是缓存击穿，穿透，雪崩？"><a href="#什么是缓存击穿，穿透，雪崩？" class="headerlink" title="什么是缓存击穿，穿透，雪崩？"></a>什么是缓存击穿，穿透，雪崩？</h1><p>　　（1）缓存穿透是指客户端请求的数据在缓存中和数据库中都不存在，这样缓存永远不会生效，这些请求都会被打到数据库上。</p>
+<p>　　解决：</p>
+<p>　　　　1，缓存空对象</p>
+<p>　　　　2、布隆过滤器</p>
+<p>　　（2）缓存击穿是指热点key在某个时间点过期的时候，而恰好在这个时间点对这个Key有大量的并发请求过来，从而大量的请求打到db，属于常见的“热点”问题</p>
+<p>　　解决：</p>
+<p>　　　　1.预先设置热门数据，提前存入缓存</p>
+<p>　　　　2.实时监控热门数据，调整key过期时长</p>
+<p>　　　　3.二级缓存:对于热点数据进行二级缓存，并对于不同级别的缓存设定不同的失效时间。</p>
+<p>　　　　4.设置分布式锁</p>
+<p>　　（3）大量的应用请求无法在Redis缓存中进行处理，紧接着应用将大量请求发送到数据库层，导致数据库层的压力激增</p>
+<p>　　　　击穿与雪崩的区别即在于击穿是对于特定的热点数据来说，而雪崩是全部数据。</p>
+<p> 　  解决：</p>
+<p>　　　　1、差异化设置过期时间</p>
+<p>　　　　2、不设置过期时间</p>
+<p>　　　　3、服务降级</p>
+<h1 id="redis和memcache有什么区别"><a href="#redis和memcache有什么区别" class="headerlink" title="redis和memcache有什么区别"></a>redis和memcache有什么区别</h1><p>多线程：memcache支持多线程，Redis支持单线程</p>
+<p>持久化：Redis支持持久化(周期性的将数据写到磁盘中)，memcache不支持持久化</p>
+<p>分布式：Redis做主从结构，memcache服务器需要通过hash一致化来支撑主从结构</p>
+<h1 id="redis常见数据结构有哪些"><a href="#redis常见数据结构有哪些" class="headerlink" title="redis常见数据结构有哪些"></a>redis常见数据结构有哪些</h1><p>最常用的的有5种,字符串(String)、哈希(Hash)、列表(list)、集合(set)、有序集合(ZSET)</p>
+<h1 id="redis缓存雪崩、缓存穿透、缓存击穿"><a href="#redis缓存雪崩、缓存穿透、缓存击穿" class="headerlink" title="redis缓存雪崩、缓存穿透、缓存击穿"></a>redis缓存雪崩、缓存穿透、缓存击穿</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/t707584896/article/details/128812799">https://blog.csdn.net/t707584896/article/details/128812799</a></p>
+<h1 id="redis淘汰策略"><a href="#redis淘汰策略" class="headerlink" title="redis淘汰策略"></a>redis淘汰策略</h1><p>volatile-lru，针对设置了过期时间的key，使用lru算法进行淘汰。</p>
+<p>allkeys-lru，针对所有key使用lru算法进行淘汰。</p>
+<p>volatile-lfu，针对设置了过期时间的key，使用lfu算法进行淘汰。</p>
+<p>allkeys-lfu，针对所有key使用lfu算法进行淘汰。</p>
+<p>volatile-random，从所有设置了过期时间的key中使用随机淘汰的方式进行淘汰。</p>
+<p>allkeys-random，针对所有的key使用随机淘汰机制进行淘汰。</p>
+<p>volatile-ttl，删除生存时间最近的一个键。</p>
+<p>noeviction(默认)，不删除键，值返回错误。</p>
+<h1 id="redis分布式锁怎么实现"><a href="#redis分布式锁怎么实现" class="headerlink" title="redis分布式锁怎么实现"></a>redis分布式锁怎么实现</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/300767410/answer/1931519430">https://www.zhihu.com/question/300767410/answer/1931519430</a></p>
+<h1 id="Redis的持久化机制"><a href="#Redis的持久化机制" class="headerlink" title="Redis的持久化机制"></a>Redis的持久化机制</h1><p>区别：</p>
+<p>RDB持久化是指在指定的时间间隔内将内存中的数据集快照写入磁盘，实际操作过程就是有一个fork子进程，先将数据集写入到临时文件中，写入成功后，再替换之前的文件，用二进制压缩存储。</p>
+<p>AOF持久化以日志的形式记录服务器所处理的每一个写、删除操作，查询操作不会记录，以文本的方式记录，可以打开文件看到详细的操作记录。</p>
+<p>RDB的优缺点：</p>
+<p>优点：RDB持久化文件，速度比较快，而且存储的是一个二进制文件，传输起来很方便。</p>
+<p>缺点：RDB无法保证数据的绝对安全，有时候就是1s也会有很大的数据丢失。</p>
+<p>AOF的优缺点：</p>
+<p>优点：AOF相对RDB更加安全，一般不会有数据的丢失或者很少，官方推荐同时开启AOF和RDB。</p>
+<p>缺点：AOF持久化的速度，相对于RDB较慢，存储的是一个文本文件，到了后期文件会比较大，传输困难。</p>
+<h1 id="redis如何解决秒杀超卖问题"><a href="#redis如何解决秒杀超卖问题" class="headerlink" title="redis如何解决秒杀超卖问题"></a>redis如何解决秒杀超卖问题</h1><p>队列、事物、分布式锁等很多方式，自行了解</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/268290754">https://zhuanlan.zhihu.com/p/268290754</a></p>
+<h1 id="MySQL里有2000w数据-redis中只存20w数据-如何保证redis中数据都是热点数据"><a href="#MySQL里有2000w数据-redis中只存20w数据-如何保证redis中数据都是热点数据" class="headerlink" title="MySQL里有2000w数据,redis中只存20w数据,如何保证redis中数据都是热点数据"></a>MySQL里有2000w数据,redis中只存20w数据,如何保证redis中数据都是热点数据</h1><p>分析题目：保证Redis 中的 20w 数据都是热点数据 说明是被频繁访问的数据，并且要保证Redis的内存能够存放20w数据，要计算出Redis内存的大小。</p>
+<p>a、保留热点数据：对于保留 Redis 热点数据来说，我们可以使用 Redis 的内存淘汰策略来实现，可以使用allkeys-lru淘汰策略，该淘汰策略是从 Redis 的数据中挑选最近最少使用的数据删除，这样频繁被访问的数据就可以保留下来了。</p>
+<p>b、保证 Redis 只存20w的数据：1个中文占2个字节，假如1条数据有100个中文，则1条数据占200字节，20w数据 乘以 200字节 等于 4000 字节（大概等于38M）;所以要保证能存20w数据，Redis 需要38M的内存。</p>
+<h1 id="redis主从哨兵和集群的区别"><a href="#redis主从哨兵和集群的区别" class="headerlink" title="redis主从哨兵和集群的区别"></a>redis主从哨兵和集群的区别</h1><p>一、架构不同</p>
+<p>　　redis主从：一主多从；</p>
+<p>　　redis集群：多主多从；</p>
+<p>二、存储不同</p>
+<p>　　redis主从：主节点和从节点都是存储所有数据；</p>
+<p>　　redis集群：数据的存储是通过hash计算16384的槽位，算出要将数据存储的节点，然后进行存储；</p>
+<p>三、选举不同</p>
+<p>　　redis主从：通过启动redis自带的哨兵（sentinel）集群进行选举，也可以是一个哨兵</p>
+<p>　　　　选举流程：1、先发现主节点fail的哨兵，将成为哨兵中的leader，之后的主节点选举将通过这个leader进行故障转移操作，从存活的slave中选举新的master，新的master选举同集群的master节点选举类似；</p>
+<p>　　redis集群：集群可以自己进行选举</p>
+<p>　　　　选举流程：1、当主节点挂掉，从节点就会广播该主节点fail；</p>
+<p>　　　　　　　　　2、延迟时间后进行选举（延迟的时间算法为：延迟时间+随机数+rank*1000，从节点数据越多，rank越小，因为主从数据复制是异步进行的，所以　　所有的从节点的数据可能会不同），延迟的原因是等待主节点fail广播到所有存活的主节点，否则主节点会拒绝参加选举；</p>
+<p>　　　　　　　　　3、参加选举的从节点向所有的存活的节点发送ack请求，但只有主节点会回复它，并且主节点只会回复第一个到达参加选举的从节点，一半以上的主节点回复，该节点就会成为主节点，广播告诉其他节点该节点成为主节点。</p>
+<p>四、节点扩容不同</p>
+<p>　　redis主从：只能扩容从节点，无法对主节点进行扩容；</p>
+<p>　　redis集群：可以扩容整个主从节点，但是扩容后需要进行槽位的分片，否则无法进行数据写入，命令为：</p>
+<p>　　　　&#x2F;usr&#x2F;local&#x2F;redis-5.0.3&#x2F;src&#x2F;redis-cli -a zhuge –cluster reshard 192.168.0.61:8001，其中的192.168.0.61:8001为新加入的主从节点；</p>
+<h1 id="redis消息队列如何防止数据丢失"><a href="#redis消息队列如何防止数据丢失" class="headerlink" title="redis消息队列如何防止数据丢失"></a>redis消息队列如何防止数据丢失</h1><p>Redis实现消息队列有两种形式：</p>
+<p>广播订阅模式：基于Redis的 Pub&#x2F;Sub 机制，一旦有客户端往某个key里面 publish一个消息，所有subscribe的客户端都会触发事件</p>
+<p>集群订阅模式：基于Redis List双向+ 原子性 + BRPOP</p>
+<p>Redis消息队列时，当Redis宕机后，消息可能会丢失（也要看持久化的策略）。如果收消息方(消费端)未有重发和验证机制，Redis内的数据会出现丢失。所以，使用Redis的作为消息队列，通常是对于消息的准确性并非特别高的场景。</p>
+<p>如果绝对的保证数据最终一致性，保证消息百分百不丢，那么需要：</p>
+<p>1.写入时候要求启用事务处理，保证写一定成功。</p>
+<ol start="2">
+<li>redis配置成任何变更一定实时持久化，比如存储端是磁盘的话，每次变更马上同步写入磁盘，才算完成。redis是支持这种方式配置的，但是这么做会使它的内存数据库特性完全消失，性能变得十分低下。</li>
+<li>消费端也要实现事务方式，处理完成后，再回来真实删除消息。</li>
+<li>多线程或者多端同时并发处理，可以通过锁的方式来规避。</li>
+</ol>
+<p>3 4的需求需要自己实现，可以一起考虑，用另外一个队列实现的方式也可以，但是更好的方式是在队列内部实现个计数器。hash格式的加个字段加数值，list的先推一个数值打底，string的头上加个数值再加个分隔符，就可以做个简单计数器了，虽然土，胜在够实用。</p>
+<p>除了特定的系统之外，一般不会要求这么强的一致性，实现倒不难，但是性能会很差很差。</p>
+<p>银行类支付类业务会要求严格的事务一致性，而互联网类业务一般会用点取巧的方式，就是可以容忍极短时间内少量数据丢失的方式，换取更高性能。</p>
+<p>比如上面的redis处理，可以改为1000条数据变更的时候再真实落盘，即写入磁盘。那么极限情况下，如突然断电，存在可能丢失这1000条数据的风险。当然这种情况出现的概率也是很低的（远离蓝翔挖掘机？），所以大部分场景下可以接受。</p>
+<h1 id="MQ消息队列你怎么选择，各大优劣"><a href="#MQ消息队列你怎么选择，各大优劣" class="headerlink" title="MQ消息队列你怎么选择，各大优劣"></a>MQ消息队列你怎么选择，各大优劣</h1><p>1 RabbitMQ</p>
+<p>优点：轻量级、容易部署和使用、支持多种客户端开发语言、支持灵活的路由配置</p>
+<p>缺点：对消息堆积的支持并不好、性能和吞吐量较差、使用 Erlang 语言编写，比较难进行二次开发</p>
+<p>2 RocketMQ</p>
+<p>优点：性能好、稳定可靠、有活跃的中文社区、使用 Java 开发，容易进行二次开发、特点响应快</p>
+<p>缺点：兼容性较差</p>
+<p>3 Kafka</p>
+<p>优点：兼容性极好、设计上大量使用了批量和异步的思想，有超高的性能、</p>
+<p>缺点：由于 “先攒一波再一起处理” 的设计，时延较高，不太适合在线业务场景</p>
+<p>4 总结</p>
+<p>如果说，消息队列并不是你将要构建的主角之一，对消息队列的功能和性能都没有很高的要求，只需要一个开箱即用易于维护的产品，建议使用 RabbitMQ。</p>
+<p>如果系统使用消息队列的主要场景是处理在线业务，比如在交易系统中用消息队列传递订单，那 RocketMQ 的低延迟和金融级的稳定性是我们需要的。</p>
+<p>如果需要的是处理海量的数据，像收集日志、监控信息或是前端的埋点这类数据，或是应用场景大量使用了大数据、流计算相关的开源产品，那 Kafka 是最适合的消息队列。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/" data-id="cmb0yxkq70006q8umfpmf31o1" data-title="Redis面试题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/05/15/Memcached%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Memcached面试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Nginx面试题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">May 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/05/15/Memcached%E9%9D%A2%E8%AF%95%E9%A2%98/">Memcached面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/">Redis面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/">Nginx面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">MySQL面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/%E9%9D%A2%E8%AF%95/">面试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

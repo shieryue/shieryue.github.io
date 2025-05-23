@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Nginx面试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Nginx和ApacheApache：稳定、动态处理优于nginx、占内存大、重写机制好Nginx：并发能力强、占内存小、静态资源处理好、10万并发、配置简单 Nginx相对于Apache的优势1.轻量级，采用C进行编写，同样的web服务，会占用更少的内存及资源2.抗并发，nginx以epoll and kqueue作为开发模型，处理请求是异步非阻塞的，多个连接对应一个进程，负载能力比apache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx面试题">
+<meta property="og:url" content="http://example.com/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Nginx和ApacheApache：稳定、动态处理优于nginx、占内存大、重写机制好Nginx：并发能力强、占内存小、静态资源处理好、10万并发、配置简单 Nginx相对于Apache的优势1.轻量级，采用C进行编写，同样的web服务，会占用更少的内存及资源2.抗并发，nginx以epoll and kqueue作为开发模型，处理请求是异步非阻塞的，多个连接对应一个进程，负载能力比apache">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-15T03:12:51.000Z">
+<meta property="article:modified_time" content="2025-05-15T04:23:26.976Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Nginx面试题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2025-05-15T03:12:51.000Z" itemprop="datePublished">2025-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Nginx面试题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Nginx和Apache"><a href="#Nginx和Apache" class="headerlink" title="Nginx和Apache"></a>Nginx和Apache</h1><p>Apache：稳定、动态处理优于nginx、占内存大、重写机制好<br>Nginx：并发能力强、占内存小、静态资源处理好、10万并发、配置简单</p>
+<h2 id="Nginx相对于Apache的优势"><a href="#Nginx相对于Apache的优势" class="headerlink" title="Nginx相对于Apache的优势"></a>Nginx相对于Apache的优势</h2><p>1.轻量级，采用C进行编写，同样的web服务，会占用更少的内存及资源<br>2.抗并发，nginx以epoll and kqueue作为开发模型，处理请求是异步非阻塞的，多个连接对应一个进程，<br>负载能力比apache高很多，而apache则是同步多进程模型，只能一个连接对应一个进程，当压力过大时，它是会被阻塞型的。在高并发下nginx能保持低资源低消耗高性能 ，而apache在PHP处理慢或者前端压力很大的情况下，很容易出现进程数飙升，从而拒绝服务的现象。<br>3.设计高度模块化，编写模块相对简单<br>4.配置简洁，正则配置让很多事情变得简单，而且改完配置能使用 -t 测试配置有没有问题，<br>apache 配置复杂 ，重启的时候发现配置出错了，会很崩溃<br>5.一般用于处理静态文件，静态处理性能比apache高三倍以上<br>6.作为负载均衡服务器，支持7层负载均衡<br>7.本身就是一个反向代理服务器，而且可以作为非常优秀的邮件代理服务器<br>8.nginx启动特别容易, 并且几乎可以做到 7*24 不间断运行，即使运行数个月也不需要重新启动，<br>支持热部署，比如：实现不间断服务的情况下进行软件版本的升级与版本的回退<br>9.社区活跃，各种高性能模块出品迅速</p>
+<h2 id="Apache相对于Nginx的优势"><a href="#Apache相对于Nginx的优势" class="headerlink" title="Apache相对于Nginx的优势"></a>Apache相对于Nginx的优势</h2><p>1.apache的rewrite比nginx强大，在rewrite频繁的情况下，用apache<br>2.apache发展到现在，模块超多，基本想到的都可以找到<br>3.apache更为成熟，少bug ，nginx的bug相对较多<br>4.apache超稳定，nginx稳定性差<br>5.apache对PHP支持比较简单，nginx需要配合其他后端用<br>6.apache在处理动态请求有优势，nginx在这方面是鸡肋，一般动态请求要apache去做，nginx适合静态和反向。<br>7.apache仍然是目前的主流，拥有丰富的特性，成熟的技术和开发社区</p>
+<h2 id="两者最核心的区别"><a href="#两者最核心的区别" class="headerlink" title="两者最核心的区别"></a>两者最核心的区别</h2><p>Apache是同步多进程模型，一个连接对应一个进程</p>
+<p>Nginx是异步的，多个连接（万级别）可以对应一个进程。</p>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><p>一般来说，需要性能的web服务，用Nginx；如果不需要性能只求稳定，更考虑Apache；<br>Nginx处理放静态内容比Apache要好，特别是在可承受压力、带宽及资源消耗上都要优于Apache。<br>所以更为通用的方案是，前端Nginx抗并发，后端Apache集群，配合起来会更好。</p>
+<h1 id="Nginx报错502"><a href="#Nginx报错502" class="headerlink" title="Nginx报错502"></a>Nginx报错502</h1><p>http请求流程：一般情况下，提交动态请求的时候，nginx会直接把 请求转交给php-fpm，而php-fpm再分配php-cgi进程来处理相关的请求，之后再依次返回，最后由nginx把结果反馈给客户端浏览器。</p>
+<p>Nginx 502 Bad Gateway错误是FastCGI有问题</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a><strong>解决办法</strong></h4><p>遇到502问题，可以优先考虑按照以下两个步骤去解决。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">1、查看当前的PHP FastCGI进程数是否够用（max_children值）</span><br><span class="line">netstat -anpo | grep &quot;php-cgi&quot;| wc -l</span><br><span class="line">如果实际使用的“FastCGI进程数”接近预设的“FastCGI进程数”，那么，说明“FastCGI进程数”不够用，需要增大。</span><br><span class="line"></span><br><span class="line">2、部分PHP程序的执行时间超过了Nginx的等待时间（php内存不足）</span><br><span class="line">增加nginx.conf配置文件中FastCGI的timeout时间，例如：</span><br><span class="line">    fastcgi_connect_timeout 300;</span><br><span class="line">    fastcgi_send_timeout 300;</span><br><span class="line">    fastcgi_read_timeout 300;</span><br><span class="line">php.ini中的memory_limit=64M，重启nginx。</span><br><span class="line"></span><br><span class="line">如果这样修改了还解决不了问题，可以参考下面这些方案：</span><br><span class="line">3、max-children和max-requests</span><br><span class="line">一台服务器上运行着nginx php(fpm) xcache，访问量日均 300W pv左右</span><br><span class="line">最近经常会出现这样的情况： </span><br><span class="line">php页面打开很慢，cpu使用率突然降至很低，系统负载突然升至很高，查看网卡的流量，也会发现突然降到了很低。这种情况只持续数秒钟就恢复了</span><br><span class="line">检查php-fpm的日志文件发现了一些线索：</span><br><span class="line"></span><br><span class="line">    Sep3008:32:23.289973[NOTICE] fpm_unix_init_main(), line 271: getrlimit(nofile): max:51200,cur:51200</span><br><span class="line">    Sep3008:32:23.290212[NOTICE] fpm_sockets_init_main(), line 371:using inherited socket fd=10,“127.0.0.1:9000″</span><br><span class="line">    Sep3008:32:23.290342[NOTICE] fpm_event_init_main(), line 109: libevent:using epoll</span><br><span class="line">    Sep3008:32:23.296426[NOTICE] fpm_init(), line 47: fpm is running, pid 30587</span><br><span class="line"></span><br><span class="line">在这几句的前面，是1000多行的关闭children和开启children的日志</span><br><span class="line">原来，php-fpm有一个参数 max_requests，该参数指明了，每个children最多处理多少个请求后便会被关闭，默认的设置是500。</span><br><span class="line">因为php是把请求轮询给每个children，在大流量下，每个childre到达max_requests所用的时间都差不多，这样就造成所有的children基本上在同一时间被关闭。</span><br><span class="line">在这期间，nginx无法将php文件转交给php-fpm处理，所以cpu会降至很低(不用处理php，更不用执行sql)，而负载会升至很高(关闭和开启children、nginx等待php-fpm)，</span><br><span class="line">网卡流量也降至很低(nginx无法生成数据传输给客户端)</span><br><span class="line"></span><br><span class="line">增加children的数量，并且将 max_requests 设置未 0 或者一个比较大的值：</span><br><span class="line"></span><br><span class="line">打开 /usr/local/php/etc/php-fpm.conf</span><br><span class="line"></span><br><span class="line">调大以下两个参数(根据服务器实际情况，过大也不行）</span><br><span class="line"></span><br><span class="line">    &lt;valuename=”max_children”&gt;5120&lt;/value&gt;</span><br><span class="line">    &lt;valuename=”max_requests”&gt;600&lt;/value&gt;</span><br><span class="line"></span><br><span class="line">然后重启php-fpm。</span><br><span class="line">5、增加缓冲区容量大小</span><br><span class="line">将nginx的error log打开，发现“pstream sent too big header while reading response header from upstream”这样的错误提示。</span><br><span class="line">查阅了一下资料，大意是nginx缓冲区有一个bug造成的,我们网站的页面消耗占用缓冲区可能过大。参考老外写的修改办法增加了缓冲区容量大小设置，502问题彻底解决。</span><br><span class="line">后来系统管理员又对参数做了调整只保留了2个设置参数：client head buffer，fastcgi buffer size。</span><br><span class="line"></span><br><span class="line">6、request_terminate_timeout</span><br><span class="line">如果主要是在一些post或者数据库操作的时候出现502这种情况，而不是在静态页面操作中常见，那么可以查看一下php-fpm.conf设置中的一项：</span><br><span class="line">request_terminate_timeout</span><br><span class="line"></span><br><span class="line">这个值是max_execution_time，就是fast-cgi的执行脚本时间。</span><br><span class="line">0s为关闭，就是无限执行下去。（当时装的时候没仔细看就改了一个数字）</span><br><span class="line"></span><br><span class="line">优化fastcgi中，还可以改改这个值5s 看看效果。</span><br><span class="line">php-cgi进程数不够用、php执行时间长、或者是php-cgi进程死掉，都会出现502错误。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="Nginx的报错500"><a href="#Nginx的报错500" class="headerlink" title="Nginx的报错500"></a>Nginx的报错500</h1><h3 id="500：服务器内部错误，也就是服务器遇到意外情况，而无法履行请求。"><a href="#500：服务器内部错误，也就是服务器遇到意外情况，而无法履行请求。" class="headerlink" title="500：服务器内部错误，也就是服务器遇到意外情况，而无法履行请求。"></a><strong>500：服务器内部错误，也就是服务器遇到意外情况，而无法履行请求。</strong></h3><h3 id="500错误一般有几种情况："><a href="#500错误一般有几种情况：" class="headerlink" title="500错误一般有几种情况："></a>500错误一般有几种情况：</h3><p>\1. web脚本错误，如php语法错误，lua语法错误等。</p>
+<p>\2. 访问量大的时候，由于系统资源限制，而不能打开过多的文件</p>
+<h3 id="一般分析思路："><a href="#一般分析思路：" class="headerlink" title="一般分析思路："></a>一般分析思路：</h3><p>（1）查看nginx error log ，查看php error log</p>
+<p>（2）如果是too many open files，修改nginx的worker_rlimit_nofile参数，使用ulimit查看系统打开文件限制，修改&#x2F;etc&#x2F;security&#x2F;limits.conf</p>
+<p>（3）如果是脚本的问题，则需要修复脚本错误，并优化代码</p>
+<p>（4）各种优化都做好，还是出现too many open files，那就要考虑做负载均衡，把流量分散到不同服务器上去了。</p>
+<h3 id="错误原因总结："><a href="#错误原因总结：" class="headerlink" title="错误原因总结："></a>错误原因总结：</h3><p>1、硬盘空间满了 </p>
+<p>使用 df -h 查看硬盘空间是否满了。清理硬盘空间就可以解决500错误。</p>
+<p>nginx如果开启了access log，在不需要的情况下，最好关闭access log。access log会占用大量硬盘空间。 </p>
+<p>2、nginx配置文件错误 </p>
+<p>这里不是指语法错误，nginx如果配置文件有语法错误，启动的时候就会提示。当配置rewrite的时候，有些规则处理不当会出现500错误，请仔细检查自己的rewrite规则。如果配置文件里有些变量设置不当，也会出现500错误，比如引用了一个没有值的变量。 </p>
+<p>3、如果上面的问题都不存在可能是模拟的并发数太多了，需要调整一下nginx.conf的并发设置数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">解决方法是：1 打开/etc/security/limits.conf文件，加上两句</span><br><span class="line">复制代码代码如下:</span><br><span class="line">* soft nofile 65535 </span><br><span class="line">* hard nofile 65535 </span><br><span class="line"></span><br><span class="line">2 打开/etc/nginx/nginx.conf </span><br><span class="line">在worker_processes的下面增加一行</span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line"></span><br><span class="line">3 重新启动nginx，重新载入设置 </span><br><span class="line">复制代码代码如下:</span><br><span class="line">kill -9 `ps -ef | grep php | grep -v grep | awk &#x27;&#123;print $2&#125;&#x27;` </span><br><span class="line">/usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -C 100 -u www-data -f /usr/bin/php-cgi </span><br><span class="line">killall -HUP nginx </span><br><span class="line">重启后再看nginx的错误日志，也没有发现500报错的情况了。 </span><br><span class="line"></span><br><span class="line">4、有可能是数据库问题我的在nginx日志php日志都没有发现什么问题, 最后发现数据库访问不了,修正后问题解决。</span><br></pre></td></tr></table></figure>
+
+<h1 id="Nginx报错504"><a href="#Nginx报错504" class="headerlink" title="Nginx报错504"></a>Nginx报错504</h1><p>Nginx 504错误(Gateway time-out  网关超时)的含义是所请求的网关没有请求到，简单来说就是没有请求到可以执行的PHP-CGI。</p>
+<p>一般看来, 这种情况可能是由于nginx默认的fastcgi进程响应的缓冲区太小造成的, 这将导致fastcgi进程被挂起, 如果你的fastcgi服务对这个挂起处理的不好, 那么最后就极有可能导致504 Gateway Time-out。<br>现在的网站, 尤其某些论坛有大量的回复和很多内容的, 一个页面甚至有几百K，默认的fastcgi进程响应的缓冲区是8K, 我们可以设置大点，</p>
+<p>在nginx.conf里, 加入:</p>
+<p><strong>fastcgi_buffers 8 128k</strong></p>
+<p>这表示设置fastcgi缓冲区为<strong>8×128k</strong><br>当然如果您在进行某一项即时的操作, 可能需要nginx的超时参数调大点, 例如设置成60秒:</p>
+<p><strong>send_timeout 60;</strong></p>
+<h3 id="Nginx-502与504的区别："><a href="#Nginx-502与504的区别：" class="headerlink" title="Nginx 502与504的区别："></a>Nginx 502与504的区别：</h3><p>Nginx 502 Bad Gateway的含义是请求的PHP-CGI已经执行，但是由于某种原因(一般是读取资源的问题)没有执行完毕而导致PHP-CGI进程终止。</p>
+<p>Nginx 504 Gateway Time-out的含义是所请求的网关没有请求到，简单来说就是没有请求到可以执行的PHP-CGI。</p>
+<p>解决这两个问题其实是需要综合思考的，一般来说Nginx 502 Bad Gateway和php-fpm.conf的设置有关，而Nginx 504 Gateway Time-out则是与nginx.conf的设置有关。</p>
+<h1 id="nginx和apache的区别？"><a href="#nginx和apache的区别？" class="headerlink" title="nginx和apache的区别？"></a>nginx和apache的区别？</h1><p>　　（1）二者最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程 。nginx处理静态文件好,耗费内存少.但无疑apache仍然是目前的主流,有很多丰富的特性.所以还需要搭配着来.当然如果能 确定nginx就适合需求,那么使用nginx会是更经济的方式。</p>
+<p>　　（2）nginx的负载能力比apache高很多。最新的服务器也改用nginx了。而且nginx改完配置能-t测试一下配置有没有问题。</p>
+<p>　　（3）apache重启的时候发现配置出错了，会很崩溃，改的时候都会非常小心翼翼现在看有好多集群站，前端nginx抗并发，后端apache集群， 配合的也不错。</p>
+<p>　　（4）nginx处理动态请求是鸡肋，一般动态请求要apache去做，nginx只适合静态和反向。</p>
+<p>　　（5）从经验来看，nginx是很不错的前端服务器，负载性能很好，nginx，用webbench模拟10000个静态文件请求毫不吃力。 apache对php等语言的支持很好，此外apache有强大的支持网络，发展时间相对nginx更久，bug少但是apache有先天不支持多核心处 理负载鸡肋的缺点，建议使用nginx做前端，后端用apache。大型网站建议用nginx自代的集群功能。</p>
+<p>　　（6）大部分情况下nginx都优于APACHE，比如说静态文件处理、PHP-CGI的支持、反向代理功能、前端 Cache、维持连接等等。在Apache+PHP（prefork）模式下，如果PHP处理慢或者前端压力很大的情况下，很容易出现Apache进程数 飙升，从而拒绝服务的现象。</p>
+<p>　　（7）Apache在处理动态有优势，Nginx并发性比较好，CPU内存占用低，如果rewrite频繁，那还是Apache吧！</p>
+<p>　　（8）一般来说，需要性能的web 服务，用nginx 。如果不需要性能只求稳定，那就apache 吧。</p>
+<h1 id="nginx实现高并发的原理"><a href="#nginx实现高并发的原理" class="headerlink" title="nginx实现高并发的原理?"></a>nginx实现高并发的原理?</h1><ol>
+<li>nginx高并发原理(多进程+epoll实现高并发)</li>
+</ol>
+<p>　　　　（1）Nginx 在启动后，会有一个 master 进程和多个相互独立的 worker 进程</p>
+<p>　　　　（2）每个子进程只有一个线程，采用的 IO多路复用模型epoll，实现高并发</p>
+<ol>
+<li>epoll能实现高并发原理</li>
+</ol>
+<p>　　　　（1）epoll() 中内核则维护一个链表，epoll_wait 方法可以获取到链表长度，不为0就知道文件描述符准备好了</p>
+<p>　　　　（2）在内核实现中 epoll 是根据每个 sockfd 上面的与设备驱动程序建立起来的回调函数实现的</p>
+<p>　　　　（3）某个 sockfd 上的事件发生时，与它对应的回调函数就会被调用，来把这个 sockfd 加入链表，其他处于“空闲的”状态的则不会</p>
+<p>　　　　（4）epoll上面链表中获取文件描述，这里使用内存映射（mmap）技术， 避免了复制大量文件描述符带来的开销</p>
+<p>　</p>
+<h1 id="什么是防盗链？"><a href="#什么是防盗链？" class="headerlink" title="什么是防盗链？"></a>什么是防盗链？</h1><p>　　了解防盗链之前先了解下http referer这个属性，http referer是请求头中的一部分，当浏览器向web服务器发出请求时，一般会带上这个属性用来表明网页的来源，比如我在qq空间里添加朋友的空间链接，那么当有人点击我空间里的这个链接调到朋友的qq空间时，referer的值就是我空间的url。防盗链的基本原理就是根据请求头中referer属性得到网页来源，从而实现访问控制在nginx里的location里设置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/" data-id="cmb0yxkq30002q8um0m346x55" data-title="Nginx面试题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Redis面试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/05/15/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL面试题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">May 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/05/15/Memcached%E9%9D%A2%E8%AF%95%E9%A2%98/">Memcached面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/">Redis面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/">Nginx面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">MySQL面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/%E9%9D%A2%E8%AF%95/">面试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

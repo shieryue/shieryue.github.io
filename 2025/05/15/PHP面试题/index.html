@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>PHP面试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="PHP描述https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;PHP&#x2F;9337 C语言开发的用于web网站建设的动态语言从下到上4层处理：zend 引擎 + ext 扩展 + Sapi 接口 + php 程序 高并发解决方案流量优化：防盗链处理 将恶意请求屏蔽， 前端优化：页面缓存、限制大文件下载、图片压缩、减少http请求、添加异步请求、启用浏览器缓存和文件压缩、cdn加速、建立独立的图片">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP面试题">
+<meta property="og:url" content="http://example.com/2025/05/15/PHP%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="PHP描述https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;PHP&#x2F;9337 C语言开发的用于web网站建设的动态语言从下到上4层处理：zend 引擎 + ext 扩展 + Sapi 接口 + php 程序 高并发解决方案流量优化：防盗链处理 将恶意请求屏蔽， 前端优化：页面缓存、限制大文件下载、图片压缩、减少http请求、添加异步请求、启用浏览器缓存和文件压缩、cdn加速、建立独立的图片">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-15T03:11:46.000Z">
+<meta property="article:modified_time" content="2025-05-15T04:39:12.190Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="PHP">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-PHP面试题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/05/15/PHP%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2025-05-15T03:11:46.000Z" itemprop="datePublished">2025-05-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      PHP面试题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="PHP描述"><a href="#PHP描述" class="headerlink" title="PHP描述"></a>PHP描述</h1><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/PHP/9337">https://baike.baidu.com/item/PHP/9337</a></p>
+<p>C语言开发的用于web网站建设的动态语言<br>从下到上4层处理：zend 引擎 + ext 扩展 + Sapi 接口 + php 程序</p>
+<h1 id="高并发解决方案"><a href="#高并发解决方案" class="headerlink" title="高并发解决方案"></a>高并发解决方案</h1><p>流量优化：防盗链处理 将恶意请求屏蔽，</p>
+<p>前端优化：页面缓存、限制大文件下载、图片压缩、减少http请求、添加异步请求、启用浏览器缓存和文件压缩、cdn加速、建立独立的图片服务器、</p>
+<p>后端优化：  页面静态化、并发处理、队列处理、</p>
+<p>服务器：nginx 反向代理、lvs 负载均衡，分流主机。</p>
+<p>数据库优化： 数据库缓存、分库分表、分区操作 、读写分离、负载均衡</p>
+<h1 id="session-和-cookie"><a href="#session-和-cookie" class="headerlink" title="session 和 cookie"></a>session 和 cookie</h1><p>session 服务端  安全  通过cookie 存储 sessionid  要先开启session  关闭浏览器结束会话,太多影响服务器性能<br>cookie  客户端 不安全 不占用服务器资源<br>重要信息session 、次要信息cookie、 cookie支持跨域名访问、session不支持跨域名访问</p>
+<p>共享方案：<br>1：使用数据库保存session， 使用数据库来保存session，就算服务器宕机了也没事，session照样在。<br>问题：程序需要定制；每次请求都进行数据库读写开销不小，另外数据库是一个单点，可以做数据库的hash来解 决这个问题。</p>
+<p>2：使用 memcached来保存session， 这种方式跟数据库类似，内存存取性能比数据库好很多。<br>  问题：程序需要定制，增加 了工作量；存入memcached中的数据都需要序列化，效率较低，断电或者重启电脑容易丢失数据；</p>
+<p>3：使用 redis来保存session， 这种方式跟数据库类似，内存存取性能比数据库好很多。<br>问题：程序需要定制，增加 了工作量</p>
+<p>4：通过加密的cookie，在A服务器上登录，在用户的浏览器上添加加密的cookie，当用户访问B服务器时，检查有无Session，如果没有，就检验 Cookie是否有效，Cookie有效的话就在B服务器上重建session。简单，高效， 服务器的压力减小了，因为session数据不存在服务器磁盘上。根本就不会出现session读取不到的问题。<br> 问题：网络请求占用很多。每次请求时，客户端都要通过cookie发送session数据给服务器，session中数据不能太多，浏览器对cookie 的大小存在限制。不适合高访问量的情况，因为高访问量的情况下。</p>
+<h1 id="获取文件内容的方法"><a href="#获取文件内容的方法" class="headerlink" title="获取文件内容的方法"></a>获取文件内容的方法</h1><p>1：file_get_contents得到文件的内容（可以以get和post的方式获取），整个文件读入一个字符串中<br>2：用fopen打开url, 以get方式获取内容（借助fgets()函数）<br>3：用fsockopen函数打开url（可以以get和post的方式获取），以get方式获取完整的数据，包括header和body<br>4：使用curl库获取内容，使用curl库之前，需要查看php.ini，查看是否已经打开了curl扩展</p>
+<h1 id="面向对象的特征有哪些方面"><a href="#面向对象的特征有哪些方面" class="headerlink" title="面向对象的特征有哪些方面?"></a>面向对象的特征有哪些方面?</h1><p>主要有封装,继承,多态。如果是4个方面则加上：抽象。<br>封装：（模块化）<br>封装是保证软件部件具有优良的模块性的基础,封装的目标就是要实现软件部件的高内聚,低耦合,防止程序相互依赖性而带来的变动影响.<br>继承：（重用）<br>在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。继承是子类自动共享父类数据和方法的机制，这是类之间的一种关系，提高了软件的可重用性和可扩展性。<br>多态：(动态获取)<br>多态是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量倒底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。<br>抽象：(共性)<br>抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。例如，看到一只蚂蚁和大象，你能够想象出它们的相同之处，那就是抽象。</p>
+<h1 id="OOP具有三大特点"><a href="#OOP具有三大特点" class="headerlink" title="OOP具有三大特点"></a>OOP具有三大特点</h1><p>1、封装性：也称为信息隐藏，就是将一个类的使用和实现分开，只保留部分接口和方法与外部联系，或者说只公开了一些供开发人员使用的方法。于是开发人员只 需要关注这个类如何使用，而不用去关心其具体的实现过程，这样就能实现MVC分工合作，也能有效避免程序间相互依赖，实现代码模块间松藕合。</p>
+<p>2、继承性：就是子类自动继承其父级类中的属性和方法，并可以添加新的属性和方法或者对部分属性和方法进行重写。继承增加了代码的可重用性。PHP只支持单继承，也就是说一个子类只能有一个父类。</p>
+<p>3、多态性：子类继承了来自父级类中的属性和方法，并对其中部分方法进行重写。于是多个子类中虽然都具有同一个方法，但是这些子类实例化的对象调用这些相同的方法后却可以获得完全不同的结果，这种技术就是多态性。多态性增强了软件的灵活性。</p>
+<p>1、易维护</p>
+<p>采用面向对象思想设计的结构，可读性高，由于继承的存在，即使改变需求，那么维护也只是在局部模块，所以维护起来是非常方便和较低成本的。</p>
+<p>2、质量高</p>
+<p>在设计时，可重用现有的，在以前的项目的领域中已被测试过的类使系统满足业务需求并具有较高的质量。</p>
+<p>3、效率高</p>
+<p>在软件开发时，根据设计的需要对现实世界的事物进行抽象，产生类。使用这样的方法解决问题，接近于日常生活和自然的思考方式，势必提高软件开发的效率和质量。</p>
+<p>4、易扩展</p>
+<p>由于继承、封装、多态的特性，自然设计出高内聚、低耦合的系统结构，使得系统更灵活、更容易扩展，而且成本较低。</p>
+<h1 id="OOP思想，特征和其意义"><a href="#OOP思想，特征和其意义" class="headerlink" title="OOP思想，特征和其意义"></a>OOP思想，特征和其意义</h1><p>抽象、封装、继承和多态是面向对象的基础。</p>
+<p>抽象：提取现实世界中某事物的关键特性，为该事物构建模型的过程。对同一事物在不同的需求下，需要提取的特性可能不一样。得到的抽象模型中一般包含：属性（数据）和操作（行为）。这个抽象模型我们称之为类。对类进行实例化得到对象。</p>
+<p>封装：封装可以使类具有独立性和隔离性；保证类的高内聚。只暴露给类外部或者子类必须的属性和操作。类封装的实现依赖类的修饰符（public、protected和private等）</p>
+<p>继承：对现有类的一种复用机制。一个类如果继承现有的类，则这个类将拥有被继承类的所有非私有特性（属性和操作）。这里指的继承包含：类的继承和接口的实现。</p>
+<p>多态：多态是在继承的基础上实现的。多态的三个要素：继承、重写和父类引用指向子类对象。父类引用指向不同的子类对象时，调用相同的方法，呈现出不同的行为；就是类多态特性。多态可以分成编译时多态和运行时多态。</p>
+<p>帮助理解: <a target="_blank" rel="noopener" href="https://www.cnblogs.com/waj6511988/p/6974291.html">https://www.cnblogs.com/waj6511988/p/6974291.html</a></p>
+<h1 id="OOP的七大设计原则是什么？"><a href="#OOP的七大设计原则是什么？" class="headerlink" title="OOP的七大设计原则是什么？"></a>OOP的七大设计原则是什么？</h1><ul>
+<li>开闭原则：对扩展开放，对修改关闭</li>
+<li>里氏替换原则：继承 必须保证 父类中的性质在子类中仍然成立</li>
+<li>依赖倒置原则：面向接口编程，而不面向实现类</li>
+<li>单一职责原则：控制 类的 粒度的大小 ，增强内聚性，减少耦合</li>
+<li>接口隔离原则：要为各个类提供所需的专用接口</li>
+<li>迪米特法则：迪米特法则（Law of Demeter）又叫作最少知识原则（The Least Knowledge Principle），一个类对于其他类知道的越少越好，就是说一个对象应当对其他对象有尽可能少的了解,只和朋友通信，不和陌生人说话。英文简写为: LOD。</li>
+<li>合成复用原则：尽可能使用组合或者聚合等关系来关联类，其次才考虑使用继承。</li>
+</ul>
+<p>前五个合称 SOLID原则（单一职责原则、开放关闭原则、里氏替换原则、接口隔离原则和依赖倒置原则）</p>
+<h1 id="GET-POST"><a href="#GET-POST" class="headerlink" title="GET&#x2F;POST"></a>GET&#x2F;POST</h1><p>get 请求一般用于向服务端获取数据，post 一般向服务端提交数据<br>get 传输的参数在 url 中，传递参数大小有限制，post 没有大小限制，<br>get 不安全，post 安全性比get高<br>get请求在服务端用Request.queryString 接受 ,post 请求在服务端用Requset.form 接受</p>
+<h1 id="session与cookie的区别"><a href="#session与cookie的区别" class="headerlink" title="session与cookie的区别?"></a>session与cookie的区别?</h1><p>1、cookie数据存放在第三方应用的浏览器上，session数据放在服务器上。</p>
+<p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE，进行COOKIE欺骗,考虑到安全应当使用session。</p>
+<p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能,考虑到减轻服务器性能方面，应当使用COOKIE。</p>
+<p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<p>5、所以个人建议：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">将登陆信息等重要信息存放为SESSION</span><br><span class="line"></span><br><span class="line">其他信息如果需要保留，可以放在COOKIE</span><br></pre></td></tr></table></figure>
+
+<h1 id="echo-print-print-r-的区别"><a href="#echo-print-print-r-的区别" class="headerlink" title="echo(),print(),print_r()的区别?"></a>echo(),print(),print_r()的区别?</h1><p>echo可以一次输出多个值，多个值之间用逗号分隔。echo是语言结构(language construct)，而并不是真正的函数，因此不能作为表达式的一部分使用。echo是php的内部指令，不是函数，无返回值。</p>
+<p>print()：函数print()打印一个值（它的参数），如果字符串成功显示则返回true，否则返回false。只能打印出简单类型变量的值(如int,string)，有返回值</p>
+<p>printf()：源于C语言中的printf()。该函数输出格式化的字符串。 </p>
+<h1 id="print-r-和var-dump"><a href="#print-r-和var-dump" class="headerlink" title="print_r()和var_dump()"></a>print_r()和var_dump()</h1><p>print_r()可以把字符串和数字简单地打印出来，而数组则以括起来的键和值得列表形式显示，并以Array开头。但print_r()输出布尔值和NULL的结果没有意义，因为都是打印”\n”。因此用var_dump()函数更适合调试。print_r是函数，可以打印出比较复杂的变量(如数组，对象)，有返回值</p>
+<p>var_dump()判断一个变量的类型与长度,并输出变量的数值,如果变量有值输的是变量的值并回返数据类型。此函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。</p>
+<h1 id="说一下单引号双引号？"><a href="#说一下单引号双引号？" class="headerlink" title="说一下单引号双引号？"></a>说一下单引号双引号？</h1><p>①单引号内部的变量不会执行， 双引号会执行</p>
+<p>②单引号解析速度比双引号快。</p>
+<p>③单引号只能解析部分特殊字符，双引号可以解析所有特殊字符。</p>
+<h1 id="echo-print-print-r"><a href="#echo-print-print-r" class="headerlink" title="echo(),print(),print_r()"></a>echo(),print(),print_r()</h1><p>echo是PHP语句, print和print_r是函数,语句没有返回值,函数可以有返回值(即便没有用)<br>print() 只能打印出简单类型变量的值(如int,string)<br>print_r() 可以打印出复杂类型变量的值(如数组,对象)<br>echo 输出一个或者多个字符串</p>
+<h1 id="composer是什么？composer和PHP有什么关系？"><a href="#composer是什么？composer和PHP有什么关系？" class="headerlink" title="composer是什么？composer和PHP有什么关系？"></a>composer是什么？composer和PHP有什么关系？</h1><p>Composer是PHP的一个依赖（dependency）管理工具，在我们的项目中声明所依赖的外部工具库（libraries），Composer 可以帮助我们安装这些依赖的库文件。Composer可以全局安装也可以局部安装，默认不是全局安装的，是基于指定项目的某个目录进行安装的。</p>
+<h1 id="composer团队协作怎么保证版本统一？"><a href="#composer团队协作怎么保证版本统一？" class="headerlink" title="composer团队协作怎么保证版本统一？"></a>composer团队协作怎么保证版本统一？</h1><p>安装组件使用composer install 而不是composer update，<br>.lock文件加入版本控制当中。</p>
+<h1 id="框架中什么是单一入口和多入口-，-单一入口的优缺点？"><a href="#框架中什么是单一入口和多入口-，-单一入口的优缺点？" class="headerlink" title="框架中什么是单一入口和多入口 ， 单一入口的优缺点？"></a>框架中什么是单一入口和多入口 ， 单一入口的优缺点？</h1><p>多入口就是通过访问不同的文件来完成用户请求。单一入口指 web 程序所有的请求都指向一个脚本文件的。<br>单一入口更容易控制权限，方便对 http 请求可以进行安全性检查。<br>缺点：URL 看起来不那么美观，特别是对搜索引擎来说不友好。</p>
+<p>单一入口的应用程序就是说用一个文件处理所有的HTTP请求。例如不管是列表页还是文章页，都是从浏览器访问index.php文件，这个文件就是这个应用程序的单一入口。</p>
+<p>　　框架的多入口是指可以通过访问不同的PHP文件运行对应的功能，而不需要先访问指定的入口文件。</p>
+<p>　　单一入口的优点：</p>
+<p>　　1.由于所有的HTTP请求都由index.php接收，所以可以集中进行安全性检查，如果不是单一入口，那么开发者就必须在每一个文件的开头加上安全性检查代码。</p>
+<p>　　2.还可以对URL参数和post方法进行必要的检查和对特殊字符过滤、记录日志、访问统计等各种可以集中处理的任务。</p>
+<p>单一入口的缺点：</p>
+<p>　　由于所有的HTTP请求都是针对index.php，所以程序的url看起来不美观，特别是对搜索引擎来说很不友好。</p>
+<h1 id="怎么保证促销商品不会超卖"><a href="#怎么保证促销商品不会超卖" class="headerlink" title="怎么保证促销商品不会超卖?"></a>怎么保证促销商品不会超卖?</h1><p>答:这个问题是我们当时开发时遇到的一个难点，超卖的原因主要是下的订单的数目和我们要促销的商品的数目不一致导致的，每次总是订单的数比我们的促销商品的数目要多，当时我们的小组讨论了好久，给出了好几个方案来实现：</p>
+<p>第一种方案：在每次下订单前我们判断促销商品的数量够不够，不够不允许下订单，更改库存量时加上一个条件，只更改商品库存大于0的商品的库存，当时我们使用ab进行压力测试，当并发超过500，访问量超过2000时，还是会出现超卖现象。所以被我们否定了。</p>
+<p>第二种方案：使用mysql的事务加排他锁来解决，首先我们选择数据库的存储引擎为innoDB，使用的是排他锁实现的，刚开始的时候我们测试了下共享锁，发现还是会出现超卖的现象。有个问题是，当我们进行高并发测试时，对数据库的性能影响很大，导致数据库的压力很大，最终也被我们否定了。</p>
+<p>第三种方案：使用文件锁实现。当用户抢到一件促销商品后先触发文件锁，防止其他用户进入，该用户抢到促销品后再解开文件锁，放其他用户进行操作。这样可以解决超卖的问题，但是会导致文件得I&#x2F;O开销很大。</p>
+<p>最后我们使用了redis的队列来实现。将要促销的商品数量以队列的方式存入redis中，每当用户抢到一件促销商品则从队列中删除一个数据，确保商品不会超卖。这个操作起来很方便，而且效率极高，最终我们采取这种方式来实现</p>
+<h1 id="商城秒杀的实现"><a href="#商城秒杀的实现" class="headerlink" title="商城秒杀的实现?"></a>商城秒杀的实现?</h1><p>答:抢购、秒杀是如今很常见的一个应用场景，主要需要解决的问题有两个：<br>1 高并发对数据库产生的压力<br>2 竞争状态下如何解决库存的正确减少（”超卖”问题）<br>对于第一个问题，已经很容易想到用缓存来处理抢购，避免直接操作数据库，例如使用Redis。<br>第二个问题，我们可以使用redis队列来完成，把要秒杀的商品放入到队列中，因为pop操作是原子的，即使有很多用户同时到达，也是依次执行，文件锁和事务在高并发下性能下降很快，当然还要考虑其他方面的东西，比如抢购页面做成静态的，通过ajax调用接口，其中也可能会出现一个用户抢多次的情况，这时候需要再加上一个排队队列和抢购结果队列及库存队列。高并发情况下，将用户进入排队队列，用一个线程循环处理从排队队列取出一个用户，判断用户是否已在抢购结果队列，如果在，则已抢购，否则未抢购，库存减1，写数据库，将用户入结果队列。</p>
+<h1 id="TP的特性有哪些"><a href="#TP的特性有哪些" class="headerlink" title="TP的特性有哪些?"></a>TP的特性有哪些?</h1><p>答:TP框架是我们中国人自己开发的框架,各种资料比较齐全,国内用的比较多,比较简单和方便,而且是免费开源的</p>
+<p>1.多表查询非常方便,在model中几句代码就可以完成对多表的关联操作</p>
+<p>2.融合了smarty模板,使前后台分离</p>
+<p>3.支持多种缓存技术,尤其对memcache技术支持非常好</p>
+<p>4.命名规范,模型,视图,控制器严格遵循命名规则,通过命名一一对应</p>
+<p>5.支持多种url模式</p>
+<p>6.内置ajax返回方法,包括xml,json,html等</p>
+<p>7.支持应用扩展,类库扩展,驱动扩展等</p>
+<h1 id="TP框架中的大字母函数"><a href="#TP框架中的大字母函数" class="headerlink" title="TP框架中的大字母函数?"></a>TP框架中的大字母函数?</h1><p>U:对url的组装</p>
+<p>A:内部实例化控制器</p>
+<p>S:缓存处理</p>
+<p>R:调用某个控制器的操作方法</p>
+<p>D:实例化自定义模型类</p>
+<p>M:实例化基础模型类</p>
+<p>I:获取参数</p>
+<p>L:设置或者获取当前语言</p>
+<p>C:设置或获取,保存配置</p>
+<h1 id="请介绍一下laravel框架"><a href="#请介绍一下laravel框架" class="headerlink" title="请介绍一下laravel框架?"></a>请介绍一下laravel框架?</h1><p>答: laravel框架的设计思想比较先进,非常适合应用各种开发模式,作为一个框架,它为你准备好了一切,composer是php的未来,没有composer,php肯定要走向没落</p>
+<p>laravel框架最大的特点和优秀之处就是集合了php比较新的特点,以及各种各样的设计模式,Ioc模式,依赖注入等</p>
+<p>14.laravel有那些特点?</p>
+<p>回答一:</p>
+<p>1.强大的rest router:用简单的回调函数就可以调用,快速绑定controller和router</p>
+<p>2.artisan:命令行工具,很多手动的工作都自动化</p>
+<p>3.可继承的模板,简化view的开发和管理</p>
+<p>4.blade模板:渲染速度更快</p>
+<p>5.ORM操作数据库</p>
+<p>6.migration:管理数据库和版本控制</p>
+<p>7.测试功能也很强大</p>
+<p>8.composer也是亮点</p>
+<p>回答二: laravel框架引入了门面,依赖注入,Ioc模式,以及各种各样的设计模式等</p>
+<p>15.请简述一下数据库的优化?</p>
+<p>答:数据库的优化可以从四个方面来优化:</p>
+<p>1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离</p>
+<p>2.从储存层: 采用合适的存储引擎,采用三范式</p>
+<p>3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存</p>
+<p>4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行</p>
+<p>16.如何解决异常处理?</p>
+<p>答: 抛出异常:使用try…catch，异常的代码放在try代码块内，如果没有触发异常，则代码继续执行，如果异常被触发，就会 抛出一个异常。Catch代码块捕获异常，并创建一个包含异常信息的对象。$e-&gt;getMessage()，输出异常的错误信息。</p>
+<p>解决异常:使用set_error_handler函数获取异常(也可以使用try()和catch()函数),然后使用set_exception_handler()函数设置默认的异常处理程序,register_shutdown_function()函数来执行,执行机制是,php要把调入的函数调入到内存,当页面所有的php语句都执行完成时,再调用此函数</p>
+<h1 id="权限管理-RBAC-的实现"><a href="#权限管理-RBAC-的实现" class="headerlink" title="权限管理(RBAC)的实现?"></a>权限管理(RBAC)的实现?</h1><p>1.首先创建一张用户表:id name auto(保存格式为:控制器-方法)</p>
+<p>2.然后在后台中创建一个基类控制器,控制器里封装一个构造方法,当用户登陆成功后,使用TP框架中封装好的session函数获取保存在服务器中的session id,然后实例化模型,通过用户id获取保存在数据表中的auth数据,使用explode函数分割获取到的数据,并使用一个数组保存起来,然后使用TP框架中封装好的常量获取当前控制器和方法,然后把他们组装成字符串,使用in_array函数进行判断该数组中是否含有当前获取到的控制器和方法,如果没有,就提示该用户没有权限,如果有就进行下一步操作</p>
+<h1 id="支付功能的实现"><a href="#支付功能的实现" class="headerlink" title="支付功能的实现?"></a>支付功能的实现?</h1><h1 id="购物车的原理"><a href="#购物车的原理" class="headerlink" title="购物车的原理?"></a>购物车的原理?</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、把商品添加到购物车，即订购</span><br><span class="line"></span><br><span class="line">2、删除购物车中已定购的商品</span><br><span class="line"></span><br><span class="line">3、修改购物车中某一本图书的订购数量</span><br><span class="line"></span><br><span class="line">4、清空购物车</span><br><span class="line"></span><br><span class="line">5、显示购物车中商品清单及数量、价格</span><br></pre></td></tr></table></figure>
+
+<p>实现购物车的关键在于服务器识别每一个用户并维持与他们的联系。但是HTTP协议是一种“无状态(Stateless)”的协议，因而服务器不能记住是谁在购买商品，当把商品加入购物车时，服务器也不知道购物车里原先有些什么，使得用户在不同页面间跳转时购物车无法“随身携带”，这都给购物车的实现造成了一定的困难。</p>
+<p>目前购物车的实现主要是通过cookie、session或结合数据库的方式。下面分析一下它们的机制及作用。</p>
+<p>cookie</p>
+<p>cookie是由服务器产生，存储在客户端的一段信息。它定义了一种Web服务器在客户端存储和返回信息的机制，cookie文件它包含域、路径、生存期、和由服务器设置的变量值等内容。当用户以后访问同一个Web服务器时，浏览器会把cookie原样发送给服务器。通过让服务器读取原先保存到客户端的信息，网站能够为浏览者提供一系列的方便，例如在线交易过程中标识用户身份、安全要求不高的场合避免用户重复输入名字和密码、门户网站的主页定制、有针对性地投放广告等等。利用cookie的特性，大大扩展了WEB应用程序的功能，不仅可以建立服务器与客户机的联系，因为cookie可以由服务器定制，因此还可以将购物信息生成cookie值存放在客户端，从而实现购物车的功能。用基于cookie的方式实现服务器与浏览器之间的会话或购物车，有以下特点：</p>
+<p>1、cookie存储在客户端，且占用很少的资源，浏览器允许存放300个cookie，每个cookie的大小为4KB，足以满足购物车的要求，同时也减轻了服务器的负荷；</p>
+<p>2、cookie为浏览器所内置，使用方便。即使用户不小心关闭了浏览器窗口，只要在cookie定义的有效期内，购物车中的信息也不会丢失；</p>
+<p>3、cookie不是可执行文件，所以不会以任何方式执行，因此也不会带来病毒或攻击用户的系统；</p>
+<p>4、基于cookie的购物车要求用户浏览器必须支持并设置为启用cookie，否则购物车则失效；</p>
+<p>5、存在着关于cookie侵犯访问者隐私权的争论，因此有些用户会禁止本机的cookie功能。</p>
+<p>session</p>
+<p>session是实现购物车的另一种方法。session提供了可以保存和跟踪用户的状态信息的功能，使当前用户在session中定义的变量和对象能在页面之间共享，但是不能为应用中其他用户所访问，它与cookie最重大的区别是，session将用户在会话期间的私有信息存储在服务器端，提高了安全性。在服务器生成session后，客户端会生成一个sessionid识别号保存在客户端，以保持和服务器的同步。这个sessionid是只读的，如果客户端禁止cookie功能，session会通过在URL中附加参数，或隐含在表单中提交等其他方式在页面间传送。因此利用session实施对用户的管理则更为安全、有效。</p>
+<p>同样，利用session也能实现购物车，这种方式的特点是：</p>
+<p>1、session用新的机制保持与客户端的同步，不依赖于客户端设置；</p>
+<p>2、与cookie相比，session是存储在服务器端的信息，因此显得更为安全，因此可将身份标示，购物等信息存储在session中；</p>
+<p>3、session会占用服务器资源，加大服务器端的负载，尤其当并发用户很多时，会生成大量的session，影响服务器的性能；</p>
+<p>4、因为session存储的信息更敏感，而且是以文件形式保存在服务器中，因此仍然存在着安全隐患。</p>
+<p>结合数据库的方式</p>
+<p>这也是目前较普遍的模式，在这种方式中，数据库承担着存储购物信息的作用，session或cookie则用来跟踪用户。这种方式具有以下特点：</p>
+<p>1、数据库与cookie分别负责记录数据和维持会话，能发挥各自的优势，使安全性和服务器性能都得到了提高；</p>
+<p>2、每一个购物的行为，都要直接建立与数据库的连接，直至对表的操作完成后，连接才释放。当并发用户很多时，会影响数据库的性能，因此，这对数据库的性能提出了更高的要求；</p>
+<p>3、使cookie维持会话有赖客户端的支持。</p>
+<p>各种方式的选择：</p>
+<p>虽然cookie可用来实现购物车，但必须获得浏览器的支持，再加上它是存储在客户端的信息，极易被获取，所以这也限制了它存储更多，更重要的信息。所以一般cookie只用来维持与服务器的会话，例如国内最大的当当网络书店就是用cookie保持与客户的联系，但是这种方式最大的缺点是如果客户端不支持cookie就会使购物车失效。</p>
+<p>Session能很好地与交易双方保持会话，可以忽视客户端的设置。在购物车技术中得到了广泛的应用。但session的文件属性使其仍然留有安全隐患。</p>
+<p>结合数据库的方式虽然在一定程度上解决了上述的问题，但从上面的例子可以看出：在这种购物流程中涉及到对数据库表的频繁操作，尤其是用户每选购一次商品，都要与数据库进行连接，当用户很多的时候就加大了服务器与数据库的负荷。</p>
+<h1 id="你负责的模块有哪些难题"><a href="#你负责的模块有哪些难题" class="headerlink" title="你负责的模块有哪些难题?"></a>你负责的模块有哪些难题?</h1><p>答:在我负责的B2B电商项目中，当时我负责的是订单模块，由于客户一次选择了多家商户的商品，最终生成了一个订单，这样我们平台在给商户结算时出现了不知道这比费用应该给哪个商户，这时候我们小组经过讨论，需要涉及到订单拆分，也就是说用户点击支付后,如果有多件商品,并且不是同一家店铺那么 就要用到订单的拆分,比如如果有两件商品,并且不是同一店铺 就在原来的订单号下 在生成两个子订单号 并修改订单表中两件商品的订单号。最终实现了商品的分配管理，解决了我们的难题。</p>
+<p>我觉得在开发过程中，遇到的难题无非是两个，一个是技术层次的，我认为，只要你有恒心，有热心，没有觉得不了的难题。另一个就是沟通问题，在任何地方任何时候沟通都是最重要的，尤其是我们做开发的，不沟通好，会影响整个项目的进度，我本人是个非常还沟通的人，所以这点上也没多大问题。</p>
+<h1 id="用户下单是怎么处理的"><a href="#用户下单是怎么处理的" class="headerlink" title="用户下单是怎么处理的?"></a>用户下单是怎么处理的?</h1><p>答:判断用户有没有登录，在没有登录的情况下，不允许下单。登陆后，可进行下单,并生成唯一的订单号，此时订单的状态为未支付。</p>
+<h1 id="电商的登录是怎么实现的"><a href="#电商的登录是怎么实现的" class="headerlink" title="电商的登录是怎么实现的?"></a>电商的登录是怎么实现的?</h1><p>答:分为普通登录和第三方登录 这边主要说一下第三方登录吧，第三方登陆主要使用的是author协议，我就以QQ的第三方登陆为例来进行说明：当用户在我们的站点请求QQ的第三方登陆时，我们站点会引导用户跳转到QQ的登陆授权界面， 当用户输入QQ和密码成功登录以后会自动跳回到我们站点设置好的回调页面，并附带一个code参数，接着你使用code再次去请求QQ的授权页面，就可以从中获取到一个access token（访问令牌），通过这个access_token，我们可以调用QQ提供给我们的接口，比如获取open_id，可以获取用户的基本信息。获取到之后，我们需要拿用户的授权信息和open_id和我们平台的普通用户进行绑定。这样不管是普通用户登陆还是第三方登陆用户，都可以实现登陆。</p>
+<h1 id="在工作中遇到什么困难"><a href="#在工作中遇到什么困难" class="headerlink" title="在工作中遇到什么困难?"></a>在工作中遇到什么困难?</h1><p>答:总体来说：在工作我主要遇到这几个问题比较难处理：</p>
+<p>①我之前工作的时候发现经常会出现一些临时需求打乱了我的计划，搞得有时候这个任务还没完成，又得去做其他的任务，最后一天下来，大大小小的东西是很多，但是没有完成得非常好的，后面我总结了一下，我会把这些都添加优先级，遇到临时需求，按照优先级重新将已有任务和临时任务进行排版，保证在规定时间内有效率的完成优先级高的任务。</p>
+<p>②在做项目需求时候，遇到理解能力欠佳的人，沟通时容易被气到，影响自己的情绪，最后反倒还不能到达需要的效果。后面，每次到这种时候，我一般会借助一些纸质的、更加形象的东西，让双方都认同的、都能明白的一种方式来进行沟通，后面减少了很多不必须的麻烦。大家都知道，对于程序员来说，改需求是一件很痛苦的事情，所以前期的沟通工作很重要。</p>
+<p>③还有一件事时，我以前的领导不太懂技术，所以每次出一个新的需求出来，总是要求我们在很短的时间内完成，完不成我们就会被怀疑能力有问题。当然，每个领导都希望自己的员工能够尽快的完成任务，降低成本，提高效率。这时候我会把我们的需求细化，把其中的重点、难点都列出来，做好时间规划，耐心的跟领导沟通，项目每个点的重要性和时间的花费比例，确保在这个规划的时间点内保质保量的完成任务。慢慢的也得到了领导的认可，其实领导也不是一味的不通情理，只要把东西计划好了，以最小的代价换取最高的价值，每个人都是很容易理解得</p>
+<h1 id="写过接口吗，怎么定义接口的"><a href="#写过接口吗，怎么定义接口的" class="headerlink" title="写过接口吗，怎么定义接口的?"></a>写过接口吗，怎么定义接口的?</h1><p>答：写过。接口分为两种：一种是数据型接口，一种是应用型接口。</p>
+<p>数据型接口：是比抽象类更抽象的某种“结构”——它其实不是类，但是跟类一样的某种语法结构，是一种结构规范，规范我们类要以什么格式进行定义，一般用于团队比较大，分支比较多的情况下使用。</p>
+<p>应用型接口： API（application interface） 数据对外访问的一个入口</p>
+<p>我主要是参与的APP开发中接口的编写，客户端需要什么样的数据，我们就给他们提供相应的数据，数据以json&#x2F;xml的格式返回，并且配以相应的接口文档。</p>
+<h1 id="sku减库存"><a href="#sku减库存" class="headerlink" title="sku减库存?"></a>sku减库存?</h1><p>答:SKU &#x3D; Stock Keeping Unit (库存量单位)</p>
+<p>即库存进出计量的单位，可以是以件，盒，托盘等为单位。SKU是库存量单位，区分单品。</p>
+<p>在服装、鞋类商品中使用最多最普遍。 例如纺织品中一个SKU通常表示：规格、颜色、款式。</p>
+<p>在设计表时，不仅仅只有商品表，商品表中有个总库存，我们还需要涉及一张SKU表，里面有SKU库存和单价字段，用户每购买一件商品，实际上购买的都是SKU商品，这样在下订单成功后，应该根据所购买的商品的唯一的SKU号来进行相应的SKU库存的减少，当然商品的总库存保存在商品主表中，也需要减少总库存中的库存量。</p>
+<h1 id="库存设置？"><a href="#库存设置？" class="headerlink" title="库存设置？"></a>库存设置？</h1><p>答:库存分为商品总库存和SKU库存，往往商品总库存的为SKU库存的总和。一般在商城的后台对货品设置最高库存及最低库存后，当前库存数量与最高、最低两者比较，超出库存或者低于库存的，则被统计成报表形式反映，便于用户掌握货品库存超、短缺状态及数量。</p>
+<h1 id="订单、库存两个表-如何保证数据的一致性？"><a href="#订单、库存两个表-如何保证数据的一致性？" class="headerlink" title="订单、库存两个表 如何保证数据的一致性？"></a>订单、库存两个表 如何保证数据的一致性？</h1><p>答：在一个电子商务系统中，正常的应该是订单生成成功后，相应的库存进行减少必须要保证两者的一致性，但有时候因为某些原因，比如程序逻辑问题，并发等问题，导致下单成功而库存没有减少的情况。这种情况我们是不允许发生的，MySQL的中的事务刚好可以解决这一问题，首先得选择数据库的存储引擎为InnoDB的，事务规定了只有下订单完成了，并且相应的库存减少了才允许提交事务，否则就事务回滚，确保数据一致性。</p>
+<h1 id="O2O用户下单，c端下单，如何保证ba端数据一致？"><a href="#O2O用户下单，c端下单，如何保证ba端数据一致？" class="headerlink" title="O2O用户下单，c端下单，如何保证ba端数据一致？"></a>O2O用户下单，c端下单，如何保证ba端数据一致？</h1><p>答：O2O为线上和线下模式，O2O模式奉行的是“线上支付+实体店消费”的消费模式，即消费者在网上下单完成支付后，凭消费凭证到实体店消费。 O2O模式是把商家信息和支付程序放在线上进行，而把商品和服务兑现放在线下，也就是说O2O模式适用于快递无法送达的有形产品。数据一致性的问题是O2O行业中最常见的问题，我们可以类似于数据库的主从复制的思路来解决这个问题.O2O有个供应商系统，类似于主服务器，在ç端（从服务器）下单时，数据同步更新到供应商系统端，b，a实时从供应商系统中拉取数据进行同步，比如利用定时任务，定时拉取数据进行同步。</p>
+<h1 id="秒杀当中的细节你是怎么得出来的"><a href="#秒杀当中的细节你是怎么得出来的" class="headerlink" title="秒杀当中的细节你是怎么得出来的?"></a>秒杀当中的细节你是怎么得出来的?</h1><p>答:通过性能测试及模拟秒杀场景。每个问题都经过反复测试，不断的发现问题，不断的解决。</p>
+<h1 id="做秒杀用什么数据库，怎么实现的"><a href="#做秒杀用什么数据库，怎么实现的" class="headerlink" title="做秒杀用什么数据库，怎么实现的?"></a>做秒杀用什么数据库，怎么实现的?</h1><p>答:因为秒杀的一瞬间，并发非常大，如果同时请求数据库，会导致数据库的压力非常大，导致数据库的性能急剧下降，更严重的可能会导致数据库服务器宕机。这时候一般采用内存高速缓存数据库redis来实现的,redis是非关系型数据库，redis是单线程的，通过redis的队列可以完成秒杀过程。</p>
+<h1 id="支付宝流程怎么实现的"><a href="#支付宝流程怎么实现的" class="headerlink" title="支付宝流程怎么实现的?"></a>支付宝流程怎么实现的?</h1><p>答:首先要有一个支付宝账号，接下来向支付宝申请在线支付业务，签署协议。协议生效后有支付宝一方会给网站方一个合作伙伴ID,和安全校验码，有了这两样东西就可以按照支付宝接口文档开发支付宝接口了，中间主要涉及到一个安全问题。整个流程是这样的：我们的网站通过post传递相应的参数（如订单总金额，订单号）到支付页面，支付页面把一系列的参数经过处理，以post的方式提交给支付宝服务器，支付宝服务器进行验证，并对接收的数据进行处理，把处理后的结果返回给我们网站设置的异步和同步回调地址，通过相应的返回参数，来处理相应的业务逻辑，比如返回的参数代表支付成功，更改订单状态。</p>
+<h1 id="什么是单点登录？"><a href="#什么是单点登录？" class="headerlink" title="什么是单点登录？"></a>什么是单点登录？</h1><p>答:单点登录SSO（Single Sign On）说得简单点就是在一个多系统共存的环境下，用户在一处登录后，就不用在其他系统中登录，也就是用户的一次登录能得到其他所有系统的信任。</p>
+<h1 id="什么情况下使用缓存"><a href="#什么情况下使用缓存" class="headerlink" title="什么情况下使用缓存?"></a>什么情况下使用缓存?</h1><p>答:当用户第一次访问应用系统的时候，因为还没有登录，会被引导到认证系统中进行登录；根据用户提供的登录信息，认证系统进行身份校验，如果通过校验，应该返回给用户一个认证的凭据－－ticket；用户再访问别的应用的时候，就会将这个ticket带上，作为自己认证的凭据，应用系统接受到请求之后会把 ticket送到认证系统进行校验，检查ticket的合法性。如果通过校验，用户就可以在不用再次登录的情况下访问应用系统2和应用系统3了。</p>
+<p>实现主要技术点：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、两个站点共用一个数据验证系统</span><br><span class="line"></span><br><span class="line">2、主要通过跨域请求的方式来实现验证及session处理。</span><br></pre></td></tr></table></figure>
+
+<h1 id="怎么实现第三方登录？"><a href="#怎么实现第三方登录？" class="headerlink" title="怎么实现第三方登录？"></a>怎么实现第三方登录？</h1><p>答:第三方登陆主要是基于author协议来实现，下面简单说下实现流程:</p>
+<p>1、首先我们需要以开发者的身份向第三方登陆平台申请接入应用，申请成功后，我们会获得一个appID和一个secrectID.</p>
+<p>2、当我们的网站需接入第三方登陆时，会引导用户跳转到第三方的登陆授权页面，此时把之前申请的appID和secrectID带给登陆授权页面。</p>
+<p>3、用户登陆成功后即得到授权，第三方会返回一个临时的code给我们的网站。</p>
+<p>4、我们的网站接受到code后，再次向我们的第三方发起请求，并携带接收的code,从第三方获取access_token.</p>
+<p>5、第三方处理请求后，会返回一个access_token给我们的网站，我们的网站获取到access_token后就可以调用第三方提供的接口了，比如获取用户信息等。最后把该用户信息存入到我们站点的数据库，并把信息保存到session中，实现用户的第三方登陆。</p>
+<h1 id="如何处理负载、高并发？"><a href="#如何处理负载、高并发？" class="headerlink" title="如何处理负载、高并发？"></a>如何处理负载、高并发？</h1><p>答:从低成本、高性能和高扩张性的角度来说有如下处理方案：</p>
+<p>1、HTML静态化</p>
+<p>其实大家都知道，效率最高、消耗最小的就是纯静态化的html页面，所以我们尽可能使我们的 网站上的页面采用静态页面来实现，这个最简单的方法其实也是最有效的方法。</p>
+<p>2、图片服务器分离</p>
+<p>把图片单独存储，尽量减少图片等大流量的开销，可以放在一些相关的平台上，如骑牛等</p>
+<p>3、数据库集群和库表散列及缓存</p>
+<p>数据库的并发连接为100，一台数据库远远不够，可以从读写分离、主从复制，数据库集群方面来着手。另外尽量减少数据库的访问，可以使用缓存数据库如memcache、redis。</p>
+<p>4、镜像：</p>
+<p>尽量减少下载，可以把不同的请求分发到多个镜像端。</p>
+<p>5、负载均衡：</p>
+<p>Apache的最大并发连接为1500，只能增加服务器，可以从硬件上着手，如F5服务器。当然硬件的成本比较高，我们往往从软件方面着手。</p>
+<p>负载均衡 （Load Balancing） 建立在现有网络结构之上，它提供了一种廉价有效透明的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力，同时能够提高网络的灵活性和可用性。目前使用最为广泛的负载均衡软件是Nginx、LVS、HAProxy。我分别来说下三种的优缺点:</p>
+<p>Nginx的优点是：</p>
+<p>工作在网络的7层之上，可以针对http应用做一些分流的策略，比如针对域名、目录结构，它的正则规则比HAProxy更为强大和灵活，这也是它目前广泛流行的主要原因之一，Nginx单凭这点可利用的场合就远多于LVS了。</p>
+<p>Nginx对网络稳定性的依赖非常小，理论上能ping通就就能进行负载功能，这个也是它的优势之一；相反LVS对网络稳定性依赖比较大，这点本人深有体会；</p>
+<p>Nginx安装和配置比较简单，测试起来比较方便，它基本能把错误用日志打印出来。LVS的配置、测试就要花比较长的时间了，LVS对网络依赖比较大。</p>
+<p>可以承担高负载压力且稳定，在硬件不差的情况下一般能支撑几万次的并发量，负载度比LVS相对小些。</p>
+<p>Nginx可以通过端口检测到服务器内部的故障，比如根据服务器处理网页返回的状态码、超时等等，并且会把返回错误的请求重新提交到另一个节点，不过其中缺点就是不支持url来检测。比如用户正在上传一个文件，而处理该上传的节点刚好在上传过程中出现故障，Nginx会把上传切到另一台服务器重新处理，而LVS就直接断掉了，如果是上传一个很大的文件或者很重要的文件的话，用户可能会因此而不满。</p>
+<p>Nginx不仅仅是一款优秀的负载均衡器&#x2F;反向代理软件，它同时也是功能强大的Web应用服务器。LNMP也是近几年非常流行的web架构，在高流量的环境中稳定性也很好。</p>
+<p>Nginx现在作为Web反向加速缓存越来越成熟了，速度比传统的Squid服务器更快，可以考虑用其作为反向代理加速器。</p>
+<p>Nginx可作为中层反向代理使用，这一层面Nginx基本上无对手，唯一可以对比Nginx的就只有 lighttpd了，不过 lighttpd目前还没有做到Nginx完全的功能，配置也不那么清晰易读，社区资料也远远没Nginx活跃。</p>
+<p>Nginx也可作为静态网页和图片服务器，这方面的性能也无对手。还有Nginx社区非常活跃，第三方模块也很多。</p>
+<p>Nginx的缺点是：</p>
+<p>Nginx仅能支持http、https和Email协议，这样就在适用范围上面小些，这个是它的缺点。</p>
+<p>对后端服务器的健康检查，只支持通过端口来检测，不支持通过url来检测。不支持Session的直接保持，但能通过ip_hash来解决。</p>
+<p>LVS：使用Linux内核集群实现一个高性能、高可用的负载均衡服务器，它具有很好的可伸缩性（Scalability)、可靠性（Reliability)和可管理性（Manageability)。</p>
+<p>LVS的优点是：</p>
+<p>抗负载能力强、是工作在网络4层之上仅作分发之用，没有流量的产生，这个特点也决定了它在负载均衡软件里的性能最强的，对内存和cpu资源消耗比较低。</p>
+<p>配置性比较低，这是一个缺点也是一个优点，因为没有可太多配置的东西，所以并不需要太多接触，大大减少了人为出错的几率。</p>
+<p>工作稳定，因为其本身抗负载能力很强，自身有完整的双机热备方案，如LVS+Keepalived，不过我们在项目实施中用得最多的还是LVS&#x2F;DR+Keepalived。</p>
+<p>无流量，LVS只分发请求，而流量并不从它本身出去，这点保证了均衡器IO的性能不会受到大流量的影响。</p>
+<p>应用范围比较广，因为LVS工作在4层，所以它几乎可以对所有应用做负载均衡，包括http、数据库、在线聊天室等等。</p>
+<p>LVS的缺点是：</p>
+<p>软件本身不支持正则表达式处理，不能做动静分离；而现在许多网站在这方面都有较强的需求，这个是Nginx&#x2F;HAProxy+Keepalived的优势所在。</p>
+<p>如果是网站应用比较庞大的话，LVS&#x2F;DR+Keepalived实施起来就比较复杂了，特别后面有 Windows Server的机器的话，如果实施及配置还有维护过程就比较复杂了，相对而言，Nginx&#x2F;HAProxy+Keepalived就简单多了。</p>
+<p>HAProxy的特点是：</p>
+<p>HAProxy也是支持虚拟主机的。</p>
+<p>HAProxy的优点能够补充Nginx的一些缺点，比如支持Session的保持，Cookie的引导；同时支持通过获取指定的url来检测后端服务器的状态。</p>
+<p>HAProxy跟LVS类似，本身就只是一款负载均衡软件；单纯从效率上来讲HAProxy会比Nginx有更出色的负载均衡速度，在并发处理上也是优于Nginx的。</p>
+<p>HAProxy支持TCP协议的负载均衡转发，可以对MySQL读进行负载均衡，对后端的MySQL节点进行检测和负载均衡，大家可以用LVS+Keepalived对MySQL主从做负载均衡。</p>
+<p>HAProxy负载均衡策略非常多，HAProxy的负载均衡算法现在具体有如下8种：</p>
+<p>① roundrobin，表示简单的轮询，这个不多说，这个是负载均衡基本都具备的；</p>
+<p>② static-rr，表示根据权重，建议关注；</p>
+<p>③ leastconn，表示最少连接者先处理，建议关注；</p>
+<p>④ source，表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法，建议关注；</p>
+<p>⑤ ri，表示根据请求的URI；</p>
+<p>⑥ rl_param，表示根据请求的URl参数’balance url_param’ requires an URL parameter name；</p>
+<p>⑦ hdr(name)，表示根据HTTP请求头来锁定每一次HTTP请求；</p>
+<p>⑧ rdp-cookie(name)，表示根据据cookie(name)来锁定并哈希每一次TCP请求。</p>
+<p>Nginx和LVS对比的总结：</p>
+<p>Nginx工作在网络的7层，所以它可以针对http应用本身来做分流策略，比如针对域名、目录结构等，相比之下LVS并不具备这样的功能，所以Nginx单凭这点可利用的场合就远多于LVS了；但Nginx有用的这些功能使其可调整度要高于LVS，所以经常要去触碰触碰，触碰多了，人为出问题的几率也就会大。</p>
+<p>Nginx对网络稳定性的依赖较小，理论上只要ping得通，网页访问正常，Nginx就能连得通，这是Nginx的一大优势！Nginx同时还能区分内外网，如果是同时拥有内外网的节点，就相当于单机拥有了备份线路；LVS就比较依赖于网络环境，目前来看服务器在同一网段内并且LVS使用direct方式分流，效果较能得到保证。另外注意，LVS需要向托管商至少申请多一个ip来做Visual IP，貌似是不能用本身的IP来做VIP的。要做好LVS管理员，确实得跟进学习很多有关网络通信方面的知识，就不再是一个HTTP那么简单了。</p>
+<p>Nginx安装和配置比较简单，测试起来也很方便，因为它基本能把错误用日志打印出来。LVS的安装和配置、测试就要花比较长的时间了；LVS对网络依赖比较大，很多时候不能配置成功都是因为网络问题而不是配置问题，出了问题要解决也相应的会麻烦得多。</p>
+<p>Nginx也同样能承受很高负载且稳定，但负载度和稳定度差LVS还有几个等级：Nginx处理所有流量所以受限于机器IO和配置；本身的bug也还是难以避免的。</p>
+<p>Nginx可以检测到服务器内部的故障，比如根据服务器处理网页返回的状态码、超时等等，并且会把返回错误的请求重新提交到另一个节点。目前LVS中 ldirectd也能支持针对服务器内部的情况来监控，但LVS的原理使其不能重发请求。比如用户正在上传一个文件，而处理该上传的节点刚好在上传过程中出现故障，Nginx会把上传切到另一台服务器重新处理，而LVS就直接断掉了，如果是上传一个很大的文件或者很重要的文件的话，用户可能会因此而恼火。</p>
+<p>Nginx对请求的异步处理可以帮助节点服务器减轻负载，假如使用 apache直接对外服务，那么出现很多的窄带链接时apache服务器将会占用大 量内存而不能释放，使用多一个Nginx做apache代理的话，这些窄带链接会被Nginx挡住，apache上就不会堆积过多的请求，这样就减少了相当多的资源占用。这点使用squid也有相同的作用，即使squid本身配置为不缓存，对apache还是有很大帮助的。</p>
+<p>Nginx能支持http、https和email（email的功能比较少用），LVS所支持的应用在这点上会比Nginx更多。在使用上，一般最前端所采取的策略应是LVS，也就是DNS的指向应为LVS均衡器，LVS的优点令它非常适合做这个任务。重要的ip地址，最好交由LVS托管，比如数据库的 ip、webservice服务器的ip等等，这些ip地址随着时间推移，使用面会越来越大，如果更换ip则故障会接踵而至。所以将这些重要ip交给 LVS托管是最为稳妥的，这样做的唯一缺点是需要的VIP数量会比较多。Nginx可作为LVS节点机器使用，一是可以利用Nginx的功能，二是可以利用Nginx的性能。当然这一层面也可以直接使用squid，squid的功能方面就比Nginx弱不少了，性能上也有所逊色于Nginx。Nginx也可作为中层代理使用，这一层面Nginx基本上无对手，唯一可以撼动Nginx的就只有lighttpd了，不过lighttpd目前还没有能做到 Nginx完全的功能，配置也不那么清晰易读。另外，中层代理的IP也是重要的，所以中层代理也拥有一个VIP和LVS是最完美的方案了。具体的应用还得具体分析，如果是比较小的网站（日PV小于1000万），用Nginx就完全可以了，如果机器也不少，可以用DNS轮询，LVS所耗费的机器还是比较多的；大型网站或者重要的服务，机器不发愁的时候，要多多考虑利用LVS。</p>
+<p>数据库优化</p>
+<h1 id="做秒杀时锁表考虑到没有？"><a href="#做秒杀时锁表考虑到没有？" class="headerlink" title="做秒杀时锁表考虑到没有？"></a>做秒杀时锁表考虑到没有？</h1><p>答:考虑到了，当时我们做秒杀时考虑了好几种方案，其中有一种就是使用事务加上排他锁来实现。</p>
+<h1 id="架构类的东西接触过吗？"><a href="#架构类的东西接触过吗？" class="headerlink" title="架构类的东西接触过吗？"></a>架构类的东西接触过吗？</h1><p>有接触过，曾经自己在自己的服务器上配置过。我以前做过以下几个架构方面的配置和测试;</p>
+<p>1、数据库的读写分离、主从复制及集群。</p>
+<p>2、Nginx负载均衡</p>
+<p>3、redis集群及主从</p>
+<h1 id="封装过一个简单的框架"><a href="#封装过一个简单的框架" class="headerlink" title="封装过一个简单的框架?"></a>封装过一个简单的框架?</h1><p>答;封装过一个简单的MVC框架,主要分为3层，控制器层和模型层视图层，以及路由的分配和入口文件，模板引擎，单例模式、工厂模式，第三方类库的引入等。</p>
+<h1 id="get和post的区别"><a href="#get和post的区别" class="headerlink" title="get和post的区别?"></a>get和post的区别?</h1><ol>
+<li>get是从服务器上获取数据，post是向服务器传送数据。</li>
+<li>get是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。</li>
+<li>get传送的数据量较小，不能大于2KB。post传送的数据量较大，一般被默认为不受限制。</li>
+<li>get安全性非常低，post安全性较高。但是执行效率却比Post方法好。</li>
+</ol>
+<h1 id="如何修改会话的生存时间？"><a href="#如何修改会话的生存时间？" class="headerlink" title="如何修改会话的生存时间？"></a>如何修改会话的生存时间？</h1><p>一：在php.ini中设置session.gc_maxlifetime &#x3D; 1440 &#x2F;&#x2F;默认时间</p>
+<p>二：代码实现      $ lifeTime &#x3D; 24 * 3600; &#x2F;&#x2F;保存一天</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">session_set_cookie_params（$lifeTime）; </span><br><span class="line"></span><br><span class="line">在session_start（）;</span><br></pre></td></tr></table></figure>
+
+<h1 id="接口和抽象类的区别是什么？"><a href="#接口和抽象类的区别是什么？" class="headerlink" title="接口和抽象类的区别是什么？"></a>接口和抽象类的区别是什么？</h1><p>答:抽象类是一种不能被实例化的类，只能作为其他类的父类来使用。抽象类是通过关键字abstract来声明的。 </p>
+<p>抽象类与普通类相似，都包含成员变量和成员方法，两者的区别在于，抽象类中至少要包含一个抽象方法，抽象方法没有方法体，该方法天生就是要被子类重写的。 </p>
+<p>抽象方法的格式为：abstract function abstractMethod();</p>
+<p>接口是通过 interface 关键字来声明的，接口中的成员常量和方法都是 public 的，方法可以不写关键字public，接口中的方法也是没有方法体。接口中的方法也天生就是要被子类实现的。 </p>
+<p>抽象类和接口实现的功能十分相似，最大的不同是接口能实现多继承。在应用中选择抽象类还是接口要看具体实现。 </p>
+<p>子类继承抽象类使用 extends，子类实现接口使用implements。</p>
+<h1 id="什么是队列？排它锁，Myisam死锁如何解决？"><a href="#什么是队列？排它锁，Myisam死锁如何解决？" class="headerlink" title="什么是队列？排它锁，Myisam死锁如何解决？"></a>什么是队列？排它锁，Myisam死锁如何解决？</h1><p>答:在默认情况下MYisam是表级锁，所以同时操作单张表的多个动作只能以队列的方式进行；</p>
+<p>排它锁又名写锁，在SQL执行过程中为排除其它请求而写锁，在执行完毕后会自动释放；</p>
+<p>死锁解决：先找到死锁的线程号，然后杀掉线程ID</p>
+<h1 id="bootstrap框架有哪些优点"><a href="#bootstrap框架有哪些优点" class="headerlink" title="bootstrap框架有哪些优点?"></a>bootstrap框架有哪些优点?</h1><p>答:bootstrap是一款web开发框架,它由CSS,JavaScript,Html,三部分构成,它简洁灵活,使得web开发更加的快捷</p>
+<p>优点: </p>
+<p>①节省时间: 使用bootstrap框架,可以大大的节省项目开发时间,它包含了很多现成的代码,如果需要使用,只需要找到合适的代码,插入合适的位置即可,此外,CSS是使用LESS编写,很多样式和设计都已经设计完成了 </p>
+<p>②定制化: bootstrap可以根据自己的项目,留取框架中自己需要的部分 </p>
+<p>③设计合理:</p>
+<p>栅格系统: bootstrap定义12格栅系统,在页面已经完成时,你可以根据合适的网格,以自己的需求改变行数和布局大小,样式已经开发完成了,只需要把代码放入合适的HTML代码位置即可</p>
+<p>LESS: LESS是基于CSS之上的高级语言,其目的是使得CSS开发更加灵活,更加强大</p>
+<p>JavaScript:bootstrap提供JavaScript库,该库超越了基本的架构和样式,开发者可以轻松的操作窗口警告框,工具提示框等,可避免了我们费神费力的写脚本 </p>
+<p>4.一致性: bootstrap可以保证界面在不同平台的统一性,无论实在IE,Chrome等 </p>
+<p>5.持续更新: bootstrap在不断的改进,更具规律性和持续性 </p>
+<p>6.响应式: 无论是在PC端还是移动端,都可以保持界面的一致性 </p>
+<p>7.文档多: bootstrap的非常多</p>
+<h1 id="error-reporting的错误级别？"><a href="#error-reporting的错误级别？" class="headerlink" title="error reporting的错误级别？"></a>error reporting的错误级别？</h1><p>函数语法：error_reporting(report_level)</p>
+<p>如果参数 level 未指定，当前报错级别将被返回。下面几项是 level 可能的值：</p>
+<p>值 常量 描述</p>
+<p>1 E_ERROR 致命的运行错误。错误无法恢复，暂停执行脚本。</p>
+<p>2 E_WARNING 运行时警告(非致命性错误)。非致命的运行错误，脚本执行不会停止。</p>
+<p>3 E_PARSE 编译时解析错误。解析错误只由分析器产生。</p>
+<p>4 E_NOTICE 运行时提醒(这些经常是你代码中的bug引起的，也可能是有意的行为造成的。)</p>
+<h1 id="语句中include和require的区别？"><a href="#语句中include和require的区别？" class="headerlink" title="语句中include和require的区别？**"></a>语句中include和require的区别？**</h1><p>require(“MyRequireFile.php”);这个函数通常放在 PHP 程序的最前面，PHP 程序在执行前，就会先读入 require 所指定引入的文件，使它变成 PHP 程序网页的一部份。</p>
+<p>include(“MyIncludeFile.php”);这个函数一般是放在流程控制的处理部分中。PHP 程序网页在读到 include 的文件时，才将它读进来。</p>
+<p>require一个文件存在错误的话，那么程序就会中断执行了，并显示致命错误include一个文件存在错误的话，那么程序不会中端，而是继续执行，并显示一个警告错误。</p>
+<p>include有返回值，而require没有。</p>
+<h1 id="php转义特殊字符的函数有哪些？"><a href="#php转义特殊字符的函数有哪些？" class="headerlink" title="php转义特殊字符的函数有哪些？"></a>php转义特殊字符的函数有哪些？</h1><p>php转义特殊字符的函数是：</p>
+<p>1、addslashes()，使用反斜线引用字符串，对字符进行转义；解决sql注入问题。</p>
+<p>2、mysql_real_escape_string()，转义SQL语句中使用的字符串中的特殊字符；</p>
+<p>3、htmlspecialchars()。解决跨脚本攻击问题。</p>
+<h1 id="什么是面向对象以及特点？"><a href="#什么是面向对象以及特点？" class="headerlink" title="什么是面向对象以及特点？"></a>什么是面向对象以及特点？</h1><p>（1）提到面向对象，自然会想到面向过程，面向过程就是分析解决问题所需要的步骤，然后用函数把这些步骤一一实现，使用的时候一个一个依次调用就可以了。面向对象则是把解决的问题按照一定规则划分为多个独立的对象，然后通过调用对象的方法来解决问题。当然，一个应用程序会包含多个对象，通过多个对象的相互配合来实现应用程序的功能，这样当应用程序功能发生变动时，只需要修改个别的对象就可以了，从而使代码更容易得到维护。</p>
+<p>（2）面向对象的特点</p>
+<p>面向对象的特点主要可以概括为封装性、继承性和多态性，接下来针对这三种特性进行简单介绍。</p>
+<p>（3）封装是面向对象的核心思想，将对象的属性和行为封装起来，不需要让外界知道具体实现细节，这就是封装思想。</p>
+<p>继承性主要描述的是类与类之间的关系，通过继承，可以在无须重新编写原有类的情况下，对原有类的功能进行扩展。</p>
+<p>多态性指的是在程序中允许出现重名现象，它指在一个类中定义的属性和方法被其他类继承后，它们可以具有不同的数据类型或表现出不同的行为，这使得同一个属性和方法在不同的类中具有不同的语义。</p>
+<h1 id="怎样实现一个静态化常用的设计模式？"><a href="#怎样实现一个静态化常用的设计模式？" class="headerlink" title="怎样实现一个静态化常用的设计模式？"></a>怎样实现一个静态化常用的设计模式？</h1><ol>
+<li>动态URL地址设置静态形式（伪静态）</li>
+<li>buffer</li>
+</ol>
+<p>　　　　buffer其实就是缓冲区，一个内存地址空间，主要用于存储数据区域。</p>
+<p>　　　　编写一个buffer.php文件，并保存，并不是直接将文件内容保存在磁盘里，而是先把内容写入到buffer中，当一个buffer写满的时候，会把buffer中的数据写入到磁盘里，这是操作系统的buffer。</p>
+<ol>
+<li>PHP实现页面纯静态化</li>
+</ol>
+<p>　　　　纯静态化的html文件放在服务器端的磁盘。</p>
+<ol>
+<li>基本方式：</li>
+</ol>
+<p>　　　　file_put_contents()函数；</p>
+<ol>
+<li>ob函数</li>
+</ol>
+<p>　　　　ob_start(); 打开输出缓冲区</p>
+<p>　　　　ob_get_contents(void);返回输出缓冲区内容</p>
+<p>　　　　ob_clean(void);清空输出缓冲区</p>
+<p>　　　　ob_get_clean(void);得到当前缓冲区的内容并删除当前输出缓冲区</p>
+<ol>
+<li>PHP处理伪静态：正则表达式匹配</li>
+</ol>
+<h1 id="tp框架的生命周期？"><a href="#tp框架的生命周期？" class="headerlink" title="tp框架的生命周期？"></a>tp框架的生命周期？</h1><p>（1）入口文件，</p>
+<p>　　public&#x2F;index.php文件</p>
+<p>（2）引导文件，</p>
+<p>　　start.php文件就是系统默认的一个引导文件。start.php引导文件首先会调用base.php基础引导文件</p>
+<p>（3）注册自动加载</p>
+<p>　　系统会调用 Loader::register()方法注册自动加载</p>
+<p>（4）注册错误和异常机制</p>
+<p>​       执行Error::register()注册错误和异常处理机制。</p>
+<p>（5）应用初始化</p>
+<p>（6）URL访问检测</p>
+<p>​       5.0的URL访问必须是PATH_INFO方式（包括兼容方式）的URL地址。</p>
+<p>（7）路由检测</p>
+<p>（8）分发请求</p>
+<p>　　建议统一使用return返回数据，而不是echo输出，如非必要，请不要使用exit或者die中断执行。</p>
+<p>（9）响应输出</p>
+<p>　　控制器的所有操作方法都是return返回而不是直接输出，系统会调用Response::send方法将最终的应用返回的数据输出到页面或者客户端。</p>
+<p>（10）应用结束</p>
+<h1 id="类的自动加载怎么实现？"><a href="#类的自动加载怎么实现？" class="headerlink" title="类的自动加载怎么实现？"></a>类的自动加载怎么实现？</h1><p>​           A,手动include或者require.   B、spl_autoload_register()注册类到队列  C、开始实例化实用类</p>
+<p>　　（1）使用__autoload方法，当程序中new一个没有直接引入的类的时候，php执行引擎会自动调用该方法。</p>
+<p>　　（2）使用spl_autoload_register()，该函数可以注册给定的函数作为__autoload的实现，例如先把要加载的类作为该函数的参数注册到队列中，在调用__autoload的时候从队列中获取函数并引入，完成实例化。</p>
+<p>　　（3）当使用多个spl_autoload_register方法时，php也会自动按顺序调用被注册的方法。</p>
+<p>　　注：建议使用spl_autoload_register来实现类的自动加载，__autoload函数在更高版本的PHP中将被弃用。虽然性能和__FILE__魔术方法引入相对类路径的性能相近。但是自动加载机制可以防止或减少require_once，include_once在文件各处的随意使用类的查找顺序：优先查找手动include或require进来的类，查找不到的情况下再采用类的自动加载机制；</p>
+<h1 id="composer的作用？"><a href="#composer的作用？" class="headerlink" title="composer的作用？"></a>composer的作用？</h1><p>　　　　composer的下载功能就是自动完成 下载 include 这两步，当然前提是这些代码包要符合 composer 对包的定义，这些定义是在包代码的项目根目录下的 composer.json 文件里面。</p>
+<p>　　　　是php用来管理项目依赖的工具，用来下载项目中需要使用的外部工具库或叫组件。</p>
+<p>　  （1）在项目根目录新建composer.json文件，主要用于声明组建依赖关系，类的自动加载来协助composer管理。</p>
+<p>　　　　1、当键名是autoload时则会自动加载</p>
+<p> 　　　   2、当键是require时则会下载或更新对应组件</p>
+<p>　　　　3、composer.json文件必须都是双引号</p>
+<p>　 （2）通过composer指定指令&#x2F;命令安装依赖关系所需组件,并初始化自动加载信息。</p>
+<p>　　　　php composer.phar install</p>
+<h1 id="tp和laravel的优缺点？"><a href="#tp和laravel的优缺点？" class="headerlink" title="tp和laravel的优缺点？"></a>tp和laravel的优缺点？</h1><p>　　（1）提交数据的方式，Laravel在提交表单时需要在表单中加入{csrf_field}来防止跨域攻击，而TP不会。</p>
+<p>　　（2）路由，Laravel必须先定义，再使用，路由文件为routes.php，哪怕没有控制器方法,只要写了路由就能够访问。TP在配置文件中开启路由后，路由格式是：’路由表达式’ &#x3D;&gt; ‘路由地址和参数’（使用路由的前提是URL支持phthinfo并且开启路由），路由可以使URL更符合SEO。</p>
+<p>　　（3）中间件，Laravel的中间件，可以实现访问前后的处理,中间件就是HTTP请求到达之前经过的层，通过中间件我们可以验证用户是否登录等一些通用操作。</p>
+<p>　　（4）操作数据库方式，都可以使用实例化（建立相对应的模型类）和DB:table(‘表名’)来操作数据库，使用原生查询时不太相同，Laravel使用Db::操作(‘原生sql’)，TP使用Db::query(‘原生sql’)；</p>
+<p>　　（5）Laravel升级十分简易，而TP大版本的升级要重构代码。</p>
+<p>　　（6）渲染模版方式在Laravel框架里，使用return view()来渲染模版；而ThinkPHP里则使用了$this-&gt;display()的方式渲染模版</p>
+<p>　　（7）条件判断语句书写方式</p>
+<p>　　　　Laravel框架里 if else判断语句和foreach语句 书写时必须以@if开头 以@endif结尾,如果没有则报语法错误,@foreach @endforeach同理。而TP框架则和PHP语法规则使用方式一致直接ifesle语句判断和foreach循环遍历。</p>
+<h1 id="什么是依赖注入？"><a href="#什么是依赖注入？" class="headerlink" title="什么是依赖注入？"></a>什么是依赖注入？</h1><p>　　在PHP中，依赖注入是指对类的依赖通过构造器完成自动注入，控制器架构方法和操作方法中一旦对参数进行对象类型约束则会自动除法依赖注入，由于访问控制器的参数都来自与URL请求，普通变量就是通过参数绑定自动获取，对象变量则是通过依赖注入生成。如果是类car想调用类bus里的plane方法，就需要在类car里实例化下类bus，然后在调用plane方法，这就是类car依赖于类bus。注入了plane方法。</p>
+<h1 id="有用过预处理么？"><a href="#有用过预处理么？" class="headerlink" title="有用过预处理么？"></a>有用过预处理么？</h1><p>　　用过，PDO 类中，有个 prepare 方法可以实现预处理，PDOStament 类中的 excute方法可以执行预处理，预处理的参数分为两种，一种是:字符串占位符，另一种是?占位符，:字符串占位符在执行预处理传递参数时传入的是关联数组，而?占位符传递的是索引 数组。两者不能混合使用，但一般推荐使用:字符串占位符。</p>
+<h1 id="php传值与传引用的区别是什么？"><a href="#php传值与传引用的区别是什么？" class="headerlink" title="php传值与传引用的区别是什么？"></a>php传值与传引用的区别是什么？</h1><p>　　传值在函数范围内，改变变量值的大小不会影响到函数外的变量值；传引用在函数范围内，对值的任何改变在函数外也有所体现，传引用传的是内存地址。这里有一点需要注意，将一个变量 &#x3D; 赋值给另一个变量时，不会立即为新变量分配内存空间，而是在原变量的zval中给refcount加1。 只有当原变量或者发生改变时，才会为新变量分配内存空间，同时原变量的refcount减 1 。当然，如果unset原变量，新变量直接就使用原变量的zval而不是重新分配。&amp;引用赋值时，原变量的is_ref 变为1，refcount 加1.  如果给一个变量&amp;赋值，之前 &#x3D; 赋值的变量会分配空间。</p>
+<h1 id="如何实现session共享？"><a href="#如何实现session共享？" class="headerlink" title="如何实现session共享？"></a>如何实现session共享？</h1><p>　　　　服务器间Session同步定时同步各个服务器的session信息，此方法可能有一定延时，用户体验也不是很好。使用主-从服务器的架构，当用户在主服务器上登录后，通过脚本或者守护进程的方式，将session信息传递到各个从服务器中，也可以手工把session文件存放的目录改为nfs网络文件系统，从而实现文件的跨机器共享(使用nfs或windows文件共享都可以,或者专用的共享存储设备)。这样，用户访问其它的从服务器时，就可以读到session信息。</p>
+<p>​              缺点：比如速度慢、不稳定等，另外，如果session信息传递是主-&gt;从单向的，会有一些风险，比如主服务器down了，其它服务器无法获得session信息。</p>
+<h1 id="Git-常用命令速查？"><a href="#Git-常用命令速查？" class="headerlink" title="Git 常用命令速查？"></a>Git 常用命令速查？</h1><p>　　git branch 查看本地所有分支。</p>
+<p>　　git status 查看当前状态。</p>
+<p>　　git commit 提交。</p>
+<p>　　git branch -a 查看所有的分支。</p>
+<p>　　git branch -r 查看远程所有分支。</p>
+<p>　　git push origin master 将本地项目给提交到服务器中</p>
+<p>　　git pull 本地与服务器端同步</p>
+<p>　　git push (远程仓库名) (分支名) 将本地分支推送到服务器上去。</p>
+<p>　　git init 本地初始化</p>
+<h1 id="PHP如何实现静态化"><a href="#PHP如何实现静态化" class="headerlink" title="PHP如何实现静态化"></a>PHP如何实现静态化</h1><p>PHP的静态化分为：纯静态和伪静态。其中纯静态又分为：局部纯静态和全部纯静态。</p>
+<p>PHP伪静态：利用Apache mod_rewrite实现URL重写的方法；</p>
+<p>PHP纯静态，就是生成HTML文件的方式，我们须要开启PHP自带的缓存机制，即ob_start来开启缓存。</p>
+<h1 id="PHP经典四大排序算法"><a href="#PHP经典四大排序算法" class="headerlink" title="PHP经典四大排序算法"></a>PHP经典四大排序算法</h1><p>PHP的四种基本排序算法为：冒泡排序、插入排序、选择排序和快速排序。</p>
+<p>冒泡排序：对数组进行多轮冒泡，每一轮对数组中的元素两两比较，调整位置，冒出一个最大的数来。</p>
+<p>插入排序：假设组前面的元素是排好序的，遍历数组后面的元素，在已排好序的元素队列中找到合适的位置，插入其中。</p>
+<p>选择排序：进行多次选择，每次选出最大元素放入指定位置。</p>
+<p>快速排序：递归算法。先选择数组的第一个元素作为标准，然后把小于或等于它和大于它的数分别放入两个数组中，对这两个数组也进行相同的处理，最后合并这两个数组和第一个元素。</p>
+<h1 id="PHP常见运行模式"><a href="#PHP常见运行模式" class="headerlink" title="PHP常见运行模式"></a>PHP常见运行模式</h1><p>1）CGI（通用网关接口&#x2F; Common Gateway Interface）</p>
+<p>2）FastCGI（常驻型CGI &#x2F; Long-Live CGI）lamp</p>
+<p>3）CLI（命令行运行 &#x2F; Command Line Interface）</p>
+<p>4）Web模块模式（Apache等Web服务器运行的模式）</p>
+<p>5）ISAPI（Internet Server Application Program Interface）</p>
+<h1 id="你了解设计模式吗？说下你最常用的设计模式"><a href="#你了解设计模式吗？说下你最常用的设计模式" class="headerlink" title="你了解设计模式吗？说下你最常用的设计模式"></a>你了解设计模式吗？说下你最常用的设计模式</h1><p>大概有23种设计模式，PHP常见的大概有10几种，虽然不算是基础，但是你必须要懂得。</p>
+<p>总体来说设计模式分为三大类：</p>
+<p>1、创建型模式共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
+<p>2、结构型模式共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p>
+<p>3、行为型模式共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+<p>观察者模式是如何实现的？工厂模式是如何实现的？适配器模式是如何实现的？……<br>观察者模式：定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并且有所作为。即出版者+订阅者&#x3D;观察者模式。</p>
+<p>工厂模式 ：将调用者和创建者分离，调用者直接向工厂类请求获取调用对象，减少代码耦合，提高系统的维护性和扩展性；</p>
+<p>工厂模式应用场景：有多个产品类时就要用到工厂模式，比如在数据库连接中，我们可以采用多种数据库连接方法，有mysql扩展，mysqli扩展，PDO扩展等，在这种情况下我们可以一个扩展对应一个产品类，然后采用工厂模式。</p>
+<p>适配器模式核心思想：把对某些相似的类的操作转化为一个统一的“接口”(这里是比喻的说话)–适配器，或者比喻为一个“界面”，统一或屏蔽了那些类的细节。适配器模式还构造了一种“机制”，使“适配”的类可以很容易的增减，而不用修改与适配器交互的代码，符合“减少代码间耦合”的设计原则。</p>
+<h1 id="PHP的优化方案"><a href="#PHP的优化方案" class="headerlink" title="PHP的优化方案"></a>PHP的优化方案</h1><p>1.如果一个方法可静态化，就对它做静态声明。速率可提升至4倍。</p>
+<p>2.echo 比 print 快。</p>
+<p>3.使用echo的多重参数(译注：指用逗号而不是句点)代替字符串连接。</p>
+<p>4.在执行for循环之前确定最大循环数，不要每循环一次都计算最大值。</p>
+<p>5.注销那些不用的变量尤其是大数组，以便释放内存。</p>
+<p>6.尽量避免使用__get，__set，__autoload。</p>
+<p>7.require_once()代价昂贵。</p>
+<p>8.在包含文件时使用完整路径，解析操作系统路径所需的时间会更少。</p>
+<p>9.如果你想知道脚本开始执行(译注：即服务器端收到客户端请求)的时刻，使用$_SERVER[‘REQUEST_TIME’]要好于time()。</p>
+<p>10.函数代替正则表达式完成相同功能。</p>
+<p>11.str_replace函数比preg_replace函数快，但strtr函数的效率是str_replace函数的四倍。</p>
+<p>12.如果一个字符串替换函数，可接受数组或字符作为参数，并且参数长度不太长，那么可以考虑额外写一段替换代码，使得每次传递参数是一个字符，而不是只写一行代码接受数组作为查询和替换的参数。</p>
+<p>13.使用选择分支语句(译注：即switch case)好于使用多个if，else if语句。</p>
+<p>14.用@屏蔽错误消息的做法非常低效。</p>
+<p>15.打开apache的mod_deflate模块。</p>
+<p>16.数据库连接当使用完毕时应关掉。</p>
+<p>17.$row[‘id’]的效率是$row[id]的7倍。</p>
+<p>18.错误消息代价昂贵。</p>
+<p>19.尽量不要在for循环中使用函数，比如for ($x&#x3D;0; $x &lt; count($array); $x)每循环一次都会调用count()函数。</p>
+<p>20.在方法中递增局部变量，速度是最快的。几乎与在函数中调用局部变量的速度相当。</p>
+<p>21.递增一个全局变量要比递增一个局部变量慢2倍。</p>
+<p>22.递增一个对象属性(如：$this-&gt;prop++)要比递增一个局部变量慢3倍。</p>
+<p>23.递增一个未预定义的局部变量要比递增一个预定义的局部变量慢9至10倍。</p>
+<p>24.仅定义一个局部变量而没在函数中调用它，同样会减慢速度(其程度相当于递增一个局部变量)。PHP大概会检查看是否存在全局变量。</p>
+<p>25.方法调用看来与类中定义的方法的数量无关，因为我(在测试方法之前和之后都)添加了10个方法，但性能上没有变化。</p>
+<p>26.派生类中的方法运行起来要快于在基类中定义的同样的方法。</p>
+<p>27.调用带有一个参数的空函数，其花费的时间相当于执行7至8次的局部变量递增操作。类似的方法调用所花费的时间接近于15次的局部变量递增操作。</p>
+<p>28.用单引号代替双引号来包含字符串，这样做会更快一些。因为PHP会在双引号包围的字符串中搜寻变量，单引号则不会</p>
+<h1 id="说下你了解的session和cookie"><a href="#说下你了解的session和cookie" class="headerlink" title="说下你了解的session和cookie"></a>说下你了解的session和cookie</h1><p>1、存储位置不同</p>
+<p>cookie的数据信息存放在客户端浏览器上。</p>
+<p>session的数据信息存放在服务器上。</p>
+<p>2、存储容量不同</p>
+<p>单个cookie保存的数据&lt;&#x3D;4KB，一个站点最多保存20个Cookie。</p>
+<p>对于session来说并没有上限，但出于对服务器端的性能考虑，session内不要存放过多的东西，并且设置session删除机制。</p>
+<p>3、存储方式不同</p>
+<p>cookie中只能保管ASCII字符串，并需要通过编码方式存储为Unicode字符或者二进制数据。</p>
+<p>session中能够存储任何类型的数据，包括且不限于string，integer，list，map等。</p>
+<p>4、隐私策略不同</p>
+<p>cookie对客户端是可见的，别有用心的人可以分析存放在本地的cookie并进行cookie欺骗，所以它是不安全的。</p>
+<p>session存储在服务器上，对客户端是透明对，不存在敏感信息泄漏的风险。</p>
+<p>5、有效期上不同</p>
+<p>开发可以通过设置cookie的属性，达到使cookie长期有效的效果。</p>
+<p>session依赖于名为JSESSIONID的cookie，而cookie JSESSIONID的过期时间默认为-1，只需关闭窗口该session就会失效，因而session不能达到长期有效的效果。</p>
+<p>6、服务器压力不同</p>
+<p>cookie保管在客户端，不占用服务器资源。对于并发用户十分多的网站，cookie是很好的选择。</p>
+<p>session是保管在服务器端的，每个用户都会产生一个session。假如并发访问的用户十分多，会产生十分多的session，耗费大量的内存。</p>
+<p>7、浏览器支持不同</p>
+<p>假如客户端浏览器不支持cookie：</p>
+<p>cookie是需要客户端浏览器支持的，假如客户端禁用了cookie，或者不支持cookie，则会话跟踪会失效。关于WAP上的应用，常规的cookie就派不上用场了。</p>
+<p>运用session需要使用URL地址重写的方式,就是把session id附加在URL路径的后面，附加的方式也有两种，一种是作为URL路径的附加信息，另一种是作为查询字符串附加在URL后面。。一切用到session程序的URL都要进行URL地址重写，否则session会话跟踪还会失效。</p>
+<p>假如客户端支持cookie：</p>
+<p>cookie既能够设为本浏览器窗口以及子窗口内有效，也能够设为一切窗口内有效。</p>
+<p>session只能在本窗口以及子窗口内有效。</p>
+<p>8、跨域支持上不同</p>
+<p>cookie支持跨域名访问。</p>
+<p>session不支持跨域名访问。</p>
+<p>如何实现不基于session和cookie的用户认证。<br>将用户信息加密放到http的header部分，每次拿到http的时候，验证获取header的信息。</p>
+<h1 id="什么是CSRF攻击，XSS攻击？如何防范"><a href="#什么是CSRF攻击，XSS攻击？如何防范" class="headerlink" title="什么是CSRF攻击，XSS攻击？如何防范"></a>什么是CSRF攻击，XSS攻击？如何防范</h1><p>CSRF（Cross-site request forgery）跨站请求伪造,黑客建立一个伪造网站或发送邮箱带了一个正常URL链接来让正常用户访问，来让正常用户让自己浏览器里的COOKIE权限来执行一些非法请求，</p>
+<p>如转账，提权等操作，</p>
+<p>防范方法有，验证 HTTP Referer 字段；在请求地址中添加 token 并验证；</p>
+<p>XSS攻击</p>
+<p>主要将XSS代码提交存储在服务器端（数据库，内存，文件系统等），下次请求目标页面时不用再提交XSS代码。当目标用户访问该页面获取数据时，XSS代码会从服务器解析之后加载出来，返回到浏览器做正常的HTML和JS解析执行，XSS攻击就发生了。</p>
+<p>防范方法:通过过滤是针对非法的HTML代码包括单双引号等，使用htmlspecialchars()函数</p>
+<p>你了解RESTful API吗？说说干什么用的。<br>RESTful API是REST风格的API，是一套用来规范多种形式的前端和同一个后台的交互方式的协议。RESTful API由后台也就是SERVER来提供前端来调用；前端调用API向后台发起HTTP请求，后台响应请求将处理结果反馈给前端。</p>
+<h1 id="php设计模式六大原则"><a href="#php设计模式六大原则" class="headerlink" title="php设计模式六大原则"></a>php设计模式六大原则</h1><p>单一职责原则：不要存在多于一个导致类变更的原因。通俗的说，即一个类只负责一项职责。</p>
+<p>开放封闭原则：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。</p>
+<p>里氏替换原则：所有引用基类的地方必须能透明地使用其子类的对象。</p>
+<p>接口隔离原则：客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</p>
+<p>迪米特原则：一个对象应该对其他对象保持最少的了解。</p>
+<p>依赖倒置原则：高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象。</p>
+<h1 id="如何实现自动加载？不用composer如何实现？PSR-4是什么？"><a href="#如何实现自动加载？不用composer如何实现？PSR-4是什么？" class="headerlink" title="如何实现自动加载？不用composer如何实现？PSR-4是什么？"></a>如何实现自动加载？不用composer如何实现？PSR-4是什么？</h1><p>自动加载就是当我们在当前文件中实例化一个不存在的类时，调用自动加载机制引入相应的类文件。</p>
+<p>注：自动加载有两种方式（都是php内置的），一种是通过__autoload(),另一种是通过spl_autoload_register()。</p>
+<p>PSR是PHP Standards Recommendation的简称,制定的代码规范，简称PSR，是代码开发的事实标准。</p>
+<p>PSR-4使代码更加规范，能够满足面向package的自动加载，它规范了如何从文件路径自动加载类，同时规范了自动加载文件的位置。</p>
+<h1 id="抽象类和接口分别是什么-他们区别？"><a href="#抽象类和接口分别是什么-他们区别？" class="headerlink" title="抽象类和接口分别是什么,他们区别？"></a>抽象类和接口分别是什么,他们区别？</h1><p>抽象类：是基于类来说，其本身就是类，只是一种特殊的类，不能直接实例，可以在类里定义方法，属性。类似于模版，规范后让子类实现详细功能。</p>
+<p>接口(Interface)—— 定义行为</p>
+<p>抽象类(Abstract Class) —— 实现行为</p>
+<p>具体类(class)——执行行为</p>
+<p>接口：主要基于方法的规范，有点像抽象类里的抽象方法，只是其相对于抽象方法来说，更加独立。可让某个类通过组合多个方法来形成新的类。</p>
+<p>抽象类与接口的相同点：</p>
+<p>1、都是用于声明某一种事物，规范名称、参数，形成模块，未有详细的实现细节。</p>
+<p>2、都是通过类来实现相关的细节工作</p>
+<p>3、语法上，抽象类的抽象方法与接口一样，不能有方法体，即｛｝符号</p>
+<p>4、都可以用继承，接口可以继承接口形成新的接口，抽象类可以继承抽象类从而形成新的抽象类</p>
+<p>抽象类与接口的不同点：</p>
+<p>1、抽象类可以有属性、普通方法、抽象方法，但接口不能有属性、普通方法、可以有常量</p>
+<p>2、抽象类内未必有抽象方法，但接口内一定会有“抽象”方法</p>
+<p>3、语法上有不同</p>
+<p>4、抽象类用abstract关键字在类前声明，且有class声明为类，接口是用interface来声明，但不能用class来声明，因为接口不是类。</p>
+<p>5、抽象类的抽象方法一定要用abstract来声明，而接口则不需要</p>
+<p>6、抽象类是用extends关键字让子类继承父类后，在子类实现详细的抽象方法。而接口则是用implements让普通类在类里实现接口的详细方法，且接口可以一次性实现多个方法，用逗号分开各个接口就可</p>
+<h1 id="微服务的了解"><a href="#微服务的了解" class="headerlink" title="微服务的了解"></a>微服务的了解</h1><p>概念：又称微服务架构，是一种架构风格，它将应用程序构建为以业务领域为模型的小型自治服务集合 。</p>
+<p>优势：</p>
+<p>独立开发 – 所有微服务都可以根据各自的功能轻松开发</p>
+<p>独立部署 – 基于其服务，可以在任何应用程序中单独部署它们</p>
+<p>故障隔离 – 即使应用程序的一项服务不起作用，系统仍可继续运行</p>
+<p>混合技术堆栈 – 可以使用不同的语言和技术来构建同一应用程序的不同服务</p>
+<p>粒度缩放 – 单个组件可根据需要进行缩放，无需将所有组件缩放在一起</p>
+<p>特点：</p>
+<p>解耦 – 系统内的服务很大程度上是分离的。因此，整个应用程序可以轻松构建，更改和扩展</p>
+<p>组件化 – 微服务被视为可以轻松更换和升级的独立组件</p>
+<p>业务能力 – 微服务非常简单，专注于单一功能</p>
+<p>自治 – 开发人员和团队可以彼此独立工作，从而提高速度</p>
+<p>持续交付 – 通过软件创建，测试和批准的系统自动化，允许频繁发布软件</p>
+<p>责任 – 微服务不关注应用程序作为项目。相反，他们将应用程序视为他们负责的产品</p>
+<p>分散治理 – 重点是使用正确的工具来做正确的工作。这意味着没有标准化模式或任何技术模式。开发人员可以自由选择最有用的工具来解决他们的问题</p>
+<p>敏捷 – 微服务支持敏捷开发。任何新功能都可以快速开发并再次丢弃</p>
+<h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><p>php7的垃圾回收包含两个部分，一个是垃圾收集器，一个是垃圾回收算法。</p>
+<p>垃圾收集器，把刚刚提到的，可能是垃圾的元素收集到回收池中 也就是把变量的 zend_refcount&gt;0的变量 放在回收池中。 当回收池的值达到一定额度了，会进行统一遍历处理。进行模拟删除，如果zend_refcount&#x3D;0那就认为是垃圾，直接删除它。 遍历回收池中的每一个变量，根据每一个变量，再遍历每一个成员，如果成员还有嵌套的话继续遍历。然后把所有成员的 做模拟的 refcount -1。如果此时外部的变量的 引用次数为 0 。那么可以视为垃圾，清楚。如果大于0，那么恢复引用次数，并从垃圾回收池中取出。</p>
+<h1 id="高并发解决方案-1"><a href="#高并发解决方案-1" class="headerlink" title="高并发解决方案"></a>高并发解决方案</h1><p>1、流量优化</p>
+<p>防盗链处理(去除恶意请求)</p>
+<p>2、前端优化</p>
+<p>(1) 减少HTTP请求[将css,js等合并]</p>
+<p>(2) 添加异步请求(先不将所有数据都展示给用户,用户触发某个事件,才会异步请求数据)</p>
+<p>(3) 启用浏览器缓存和文件压缩</p>
+<p>(4) CDN加速</p>
+<p>(5) 建立独立的图片服务器(减少I&#x2F;O)</p>
+<p>3、服务端优化</p>
+<p>(1) 页面静态化</p>
+<p>(2) 并发处理</p>
+<p>(3) 队列处理</p>
+<p>4、数据库优化</p>
+<p>(1) 数据库缓存</p>
+<p>(2) 分库分表,分区</p>
+<p>(3) 读写分离</p>
+<p>(4) 负载均衡</p>
+<p>5、web服务器优化</p>
+<p>(1) nginx反向代理实现负载均衡</p>
+<p>(2) lvs实现负载均衡</p>
+<p>防止sql注入<br>防止注入的第一步就是验证数据，可以根据相应类型进行严格的验证。比如 int 类型直接同过 intval 进行转换就行：</p>
+<p>参数化绑定，防止 SQL 注入的又一道屏障。php MySQLi 和 PDO 均提供这样的功能。比如 MySQLi 可以这样去查询：</p>
+<p>魔术常量、超全局变量、魔术方法<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/t707584896/article/details/128798962">https://blog.csdn.net/t707584896/article/details/128798962</a></p>
+<p>对象的克隆与引用有什么区别<br>引用就是：当改变$Object1对象时，$Object2也做相同的变化。</p>
+<p>克隆就是：克隆的对象$Object1与原来的对象没有任何关系，它是将原来的对象从当前位置从新复制了一份。</p>
+<p>什么是composer？composer的意义？工作原理<br>composer是一个依赖管理工具，composer会帮你安装这些依赖的库文件；</p>
+<p>比如composer可以解决自动加载类，不用你写过多的new。</p>
+<h1 id="说下一些你常用的linux命令"><a href="#说下一些你常用的linux命令" class="headerlink" title="说下一些你常用的linux命令"></a>说下一些你常用的linux命令</h1><p>1.pwd 命令 2.ls 命令 3.cd 命令 4.man 命令 5.grep 命令 6.find 命令 7.chmod 命令 8.ps 命令 9.kill 命令 10.tail 命令 11.netstat 命令 8.date 查看当前系统时间 10.echo 打印</p>
+<p>多进程同时读写一个文件<br>$pid &#x3D; pcntl_fork();$fp &#x3D; fopen(“test.txt”, “a”);if (flock($fp, LOCK_EX)){ fwrite($fp, “content”); fflush($fp); flock($fp, LOCK_UN);}else{ echo “此文件正在被其他进程占用”;}</p>
+<p>常用的服务端口号<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhanghongshun624/article/details/127920039">https://blog.csdn.net/zhanghongshun624/article/details/127920039</a></p>
+<p>api接口的安全性设计<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/t707584896/article/details/129266951">https://blog.csdn.net/t707584896/article/details/129266951</a></p>
+<p>如何防止数据重复提交，重复写入<br>主要从并发上面考虑：缓存、分流、redis锁、队列、mysql所有等方面</p>
+<h1 id="SSO单点登陆"><a href="#SSO单点登陆" class="headerlink" title="SSO单点登陆"></a>SSO单点登陆</h1><p>在多个系统中，只需要登陆&#x2F;注销一次，就可以完成所有系统中的用户登陆验证。</p>
+<p>同一个域名下的子域名各个系统可以使用设置顶级域名的cookie存储登陆信息来实现；</p>
+<p>拦截登陆请求给用户中心发放令牌到子系统，子系统校验令牌后局部登陆，注销时用户中心发送请求到各个子系统注销局部登陆；</p>
+<p>jwt，各个子系统使用相同的secret，相同的token可以在不同系统中使用；</p>
+<p>以上方式的前提都要有统一的用户信息存储中心。</p>
+<p>两台 mysql 服务器，其中一台挂了，怎么让业务端无感切换<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_36757755/article/details/124049382">https://blog.csdn.net/sinat_36757755/article/details/124049382</a></p>
+<p>微服务之间怎么通信<br>1、基于网关 API</p>
+<p>2、基于 RPC</p>
+<p>3、基于 SideCar</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/452558073">https://zhuanlan.zhihu.com/p/452558073</a></p>
+<h1 id="TCP三次握手四次挥手"><a href="#TCP三次握手四次挥手" class="headerlink" title="TCP三次握手四次挥手"></a>TCP三次握手四次挥手</h1><p>握手：</p>
+<p>客户端请求服务端，发送连接请求标示和一串顺序码（X）</p>
+<p>服务端收到请求，回复确认标示和顺序码（X）+1的确认码和另一个顺序码（Y）</p>
+<p>客户端验证（X）+1确认码，通过后发送确认标示和（Y）+1的顺序码给服务端，服务端验证通过后建立连接</p>
+<p>挥手：</p>
+<p>第一次握手：TCP发送一个FIN(结束)，用来关闭客户到服务端的连接。</p>
+<p>第二次握手：服务端收到这个FIN，他发回一个ACK(确认)，确认收到序号为收到序号+1。</p>
+<p>第三次握手：服务端发送一个FIN(结束)到客户端，服务端关闭客户端的连接。</p>
+<p>第四次握手：客户端发送ACK(确认)报文确认，并将确认的序号+1，这样关闭完成</p>
+<p>为什么是四次不是三次？</p>
+<p>server端收到结束请求后，需要等待数据传输完毕，所以只能先发送一个收到请求的确认信息给客户端，等数据传输完毕后再发送结束报文。</p>
+<p>正常请求一个php网站，在浏览器输入网址打开网站，显示网页。但是在整个请求流程中浏览器做什么？服务器又是怎么在后台执行的？接下来就简单解析下一个完整的PHP请求的执行过程。<br>1、构建请求</p>
+<p>2、查找缓存</p>
+<p>3、域名解析</p>
+<p>4、与服务器建立连接</p>
+<p>TCP的三次握手</p>
+<p>5、发起HTTP请求</p>
+<p>6、服务器处理请求</p>
+<p>7、服务器响应HTTP请求</p>
+<p>8、客户端解析返回数据</p>
+<p>9、与服务器断开连接</p>
+<p>TCP的四次挥手</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43844718/article/details/126975557">https://blog.csdn.net/weixin_43844718/article/details/126975557</a></p>
+<p>网络七层协议&#x2F;OSI七层模型</p>
+<h1 id="swoole的了解"><a href="#swoole的了解" class="headerlink" title="swoole的了解"></a>swoole的了解</h1><p>技术特点：</p>
+<p>1 常驻内存，避免重复加载带来的性能损耗，提升海量性能；</p>
+<p>2 基于epoll，轻松支持高并发；</p>
+<p>3 协程异步I&#x2F;O，提高对I&#x2F;O密集型场景并发处理能力；</p>
+<p>4 支持多种通信协议，方便地开发 Http、WebSocket、TCP、UDP 等应用</p>
+<h1 id="swoole与php-fpm对比有哪些优缺点？"><a href="#swoole与php-fpm对比有哪些优缺点？" class="headerlink" title="swoole与php-fpm对比有哪些优缺点？"></a>swoole与php-fpm对比有哪些优缺点？</h1><p>优点：</p>
+<p>1 常驻内存的 cli 运行模式，不用每次请求加载一次项目代码</p>
+<p>2 大大提高了对连接请求的并发能力</p>
+<p>3 协程异步I&#x2F;O，提高对I&#x2F;O密集型场景并发处理能力</p>
+<p>4 支持多种通信协议，能搭建 TCP&#x2F;UDP&#x2F;UnixSocket 服务器</p>
+<p>5 原生支持毫秒定时器</p>
+<p>缺点</p>
+<p>1 相关文档较少</p>
+<p>2 不支持 xdebug，不支持手动 dump，不熟悉相关工具的话，不太方便调试</p>
+<p>3 入门难度高，多数 phper 不了解 TCP&#x2F;IP 网络协议、多进程 &#x2F; 多线程、异步 io 等</p>
+<p>Nginx+Php-fpm运行原理<br><a target="_blank" rel="noopener" href="http://www.test.cc/">http://www.test.cc</a><br>        |<br>      Nginx<br>        |<br>路由到 <a target="_blank" rel="noopener" href="http://www.test.cc/index.php">http://www.test.cc/index.php</a><br>        |<br>加载nginx的fast-cgi模块<br>        |<br>fast-cgi监听127.0.0.1:9000地址<br>        |<br><a target="_blank" rel="noopener" href="http://www.test.com/index.php%E8%AF%B7%E6%B1%82%E5%88%B0%E8%BE%BE127.0.0.1:9000">www.test.com/index.php请求到达127.0.0.1:9000</a><br>        |<br>php-fpm 监听127.0.0.1:9000<br>        |<br>php-fpm 接收到请求，启用worker进程处理请求<br>        |<br>php-fpm 处理完请求并撤消内存，返回给nginx<br>        |<br>nginx 将结果通过http返回给浏览器</p>
+<p>遇到一个网站打开慢怎么排查<br>1.打不开，则ping域名，看是否能请求成功。</p>
+<p>2.慢，说明能打开，直接走这一步，free&#x2F;top命令查看服务器内存和CPU使用情况，iftop等工具查看带宽</p>
+<p>3.chrome的debug-&gt;network查看响应慢的</p>
+<p>4.排查响应慢的接口代码，看php，mysql，redis等的日志看错误信息（mysql的慢查询日志功能，php-fpm慢日志功能，需要配置开启）</p>
+<p>高并发解决方案<br>1、流量优化</p>
+<p>防盗链处理(去除恶意请求)</p>
+<p>2、前端优化</p>
+<p>(1) 减少HTTP请求[将css,js等合并]</p>
+<p>(2) 添加异步请求(先不将所有数据都展示给用户,用户触发某个事件,才会异步请求数据)</p>
+<p>(3) 启用浏览器缓存和文件压缩</p>
+<p>(4) CDN加速</p>
+<p>(5) 建立独立的图片服务器(减少I&#x2F;O)</p>
+<p>3、服务端优化</p>
+<p>(1) 页面静态化</p>
+<p>(2) 并发处理</p>
+<p>(3) 队列处理</p>
+<p>4、数据库优化</p>
+<p>(1) 数据库缓存</p>
+<p>(2) 分库分表,分区</p>
+<p>(3) 读写分离</p>
+<p>5、web服务器优化</p>
+<p>(1) 分布式部署</p>
+<p>集群</p>
+<p>(2) 负载均衡</p>
+<p>如何选择消息队列？<br><a target="_blank" rel="noopener" href="https://blog.mimvp.com/article/47038.html">https://blog.mimvp.com/article/47038.html</a></p>
+<h1 id="什么是MQ"><a href="#什么是MQ" class="headerlink" title="什么是MQ?"></a>什么是MQ?</h1><p>mq是一个消息队列,其主要目的是为了解决传统的消息传输上管理困难,效率不高的问题.</p>
+<p>mq有三大优点:解耦,异步,削峰.</p>
+<p>解耦: 如果是传统的消息通讯方式,无论是哪一方都要去维护一份供外部通讯的这个一个接口,而且各方处理消息的能力有限,效率上明显跟不上,并且这样子二者之间的耦合度非常高,对于拓展管理方面极不友好,而是要了mq就不一样,发送方只需要将消息发送给mq就可以了,别的不用考虑,接口什么的由mq去维护,接收方也只需要去mq里消费消息就可以了,就需要其他开销,一切由mq中间件来做,达到了解耦操作.</p>
+<p>异步: 使用mq,还可以达到异步效果,极大地提升了消息传输的效率.发送方在发送消息后不需要关心消费方是否能消费完成,还可以继续发送其他消息.</p>
+<p>削峰:如果是传统的消息通讯,一下子有大量的消息发送给接收方,这样对于接收方的处理压力是很大的,而我们刚好可以利用mq达到一个缓冲操作,一旦流量超出了接收方处理范围,不用担心,只需要慢慢消费即可,像经典的双十一,就很容易会使用到mq这么一个优点.</p>
+<p>虽然mq有三大优点,但是我们还是得关心其一些缺点:</p>
+<p>因为增加了中间件,系统复杂度肯定大大提高,增加了很多维护的成本,比如我们要保证消息不丢失(一致性)和消息幂等性问题,还要保证mq的高可用等.</p>
+<p>mq消息队列如何保证消息的可靠性传输<br>消息的可靠性传输分为两个问题,一个是保证消息不被重复消费,另一个是保证消息不丢失.</p>
+<p>保证消息不重复被消费,就是保证消息的幂等性问题,消息的幂等性是指一个操作执行任意多次所产生的影响均与一次执行的影响相同,在mq里,也就是消息只能被消费一次,不能被重复消费.</p>
+<p>来看看消息丢失的场景:</p>
+<p>发送方丢失,可能发送方在发送消息的过程中,出现网络问题等导致mq接收不到消息,导致了消息丢失.</p>
+<p>要解决这个问题,首先可以采用事务机制,在发送消息的时候实现事务机制,若是出现发送失败的情况,可以进行回滚,而让消息重新被发送.但是开启了事务,发送方就必须同步等待事务执行完毕或者回滚,导致消息一多,性能会下降.</p>
+<p>但是,还有一个更好的办法:可以采用确认机制,发送方在发送消息的时候必须要保证要收到一个确认消息,如果没有收到或者收到失败的确认消息,就说明消息发送失败,要重新进行发送,确认机制是可以采用异步进行的,这样就极大地保证了在保留效率的基础上又能保证消息的不丢失问题.</p>
+<p>第二个丢失问题可能是在mq方发生的,如果mq没有进行持久化,出现了宕机关机等情况,消息就会丢失,解决办法无非就是将消息进行持久化,这样在出现问题的时候可以及时对消息进行恢复.</p>
+<p>第三个丢失问题可能在消费方发生,这和发送方丢失问题类似,解决这个问题也是采用确认机制,这样一来就可以实现效率上的保证和消息不丢失的保证.</p>
+<p>但是解决了这些问题,就会产生下面的幂等性问题:</p>
+<p>我们都知道mq是可以进行重发的,且只有在它认为失败的情况会进行重发.什么时候mq会认为它发送给消费者的消息是失败的呢?也就是超出了它等待消费者响应的时间,这是一个超时时间,若是过了这个时间消费者仍然没有响应,说明mq发送失败,就会进行重试,而其实这个时候消费者可能是没有失败的,它只是因为某个原因导致消费超出了mq的等待时间而已,这个时候mq再发送一次消息,消费者就会重复消费.</p>
+<p>实现幂等性消费:</p>
+<p>MQ相关面试题<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_47303191/article/details/124693751">https://blog.csdn.net/weixin_47303191/article/details/124693751</a></p>
+<p>MongoDB相关面试题<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/KangJinXuan/article/details/126936926">https://blog.csdn.net/KangJinXuan/article/details/126936926</a></p>
+<h1 id="GET和POST区别"><a href="#GET和POST区别" class="headerlink" title="GET和POST区别"></a>GET和POST区别</h1><p>**显示有区别 **<br>get方法是将字符串拼接在地址栏后面可以看见<br>而post方法看不见</p>
+<p>**传递的大小有区别 **<br>具体大小和浏览器有关系，ie浏览器是2k其他浏览器的最大值可能不同，但是也比较小。<br>而post方法传递参数的大小是可以设定的，原来是认为无限大。在PHP当中在php.ini文件是可以设置参数的大小的。</p>
+<p>**安全性 **<br>get方法安全性比较低因为暴露在外面而post方法安全性比较高</p>
+<p>**提交的原理 **<br>get方法提交的数据都是独立的。<br>而Post方法将所有的提交的数据变成一个整体（将提交的数据变成xml格式）</p>
+<p><strong>灵活性</strong><br>get方法很灵活，<br>post方法不灵活，必须要有表单的参与才能用post提交很不方便</p>
+<h1 id="常用的文件操作函数"><a href="#常用的文件操作函数" class="headerlink" title="常用的文件操作函数"></a>常用的文件操作函数</h1><p><strong>1. 获得文件名:</strong><br>basename — 返回路径中的文件名部分</p>
+<p>$path &#x3D; “&#x2F;home&#x2F;cate&#x2F;index&#x2F;index2.php”;<br>$file &#x3D; basename($path);<br>echo $file; &#x2F;&#x2F;结果index2.php</p>
+<p><strong>2. 获得目录名</strong><br>dirname — 返回路径中的目录部分</p>
+<p>$path &#x3D; “&#x2F;home&#x2F;cate&#x2F;index&#x2F;index2.php”;<br>$file &#x3D; dirname($path);<br>echo $file;&#x2F;&#x2F;结果&#x2F;home&#x2F;cate&#x2F;index</p>
+<p><strong>3.得到路径关联数组</strong><br>pathinfo() 函数以数组的形式返回关于文件路径的信息。<br>返回的数组元素如下：</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li><p>pathinfo(path,options)<br>| path | 必需。规定要检查的路径。<br>| options | 可选。规定要返回的数组元素。默认是 all。</p>
+</li>
+</ul>
+<p>可能的值：</p>
+<ul>
+<li>PATHINFO_DIRNAME - 只返回 dirname</li>
+<li>PATHINFO_BASENAME - 只返回 basename</li>
+<li>PATHINFO_EXTENSION - 只返回 extension</li>
+<li>PATHINFO_FILENAME - 只返回 filename</li>
+</ul>
+<h1 id="接口与抽象类的区别"><a href="#接口与抽象类的区别" class="headerlink" title="接口与抽象类的区别"></a>接口与抽象类的区别</h1><ol>
+<li>接口<br>（1）对接口的使用是通过关键字implements<br>（2）接口不能定义成员变量（包括类静态变量），能定义常量<br>（3）子类必须实现接口定义的所有方法<br>（4）接口只能定义不能实现该方法<br>（5）接口没有构造函数<br>（6）接口中的方法和实现它的类默认都是public类型的</li>
+<li>抽象类<br>（1）对抽象类的使用是通过关键字extends<br>（2）不能被实例化，可以定义子类必须实现的方法<br>（3）子类必须定义父类中的所有抽象方法，这些方法的访问控制必须和父类中一样（或者更为宽松）<br>（4）如一个类中有一个抽象方法，则该类必须定义为抽象类<br>（5）抽象类可以有构造函数<br>（6）抽象类中的方法可以使用private,protected,public来修饰。<br>（7）一个类可以同时实现多个接口，但一个类只能继承于一个抽象类。</li>
+<li>Final类&#x2F;方法<br>（1）final类不能被继承<br>（2）final方法不能被重写</li>
+<li>Static类&#x2F;方法<br>(1)可以不实例化类而直接访问<br>(2)静态属性不可以由对象通过-&gt;操作符来访问,用::方式调用</li>
+</ol>
+<h1 id="isset-empty-的区别"><a href="#isset-empty-的区别" class="headerlink" title="isset (),empty () 的区别"></a>isset (),empty () 的区别</h1><p>isset()：<br>若变量不存在则返回 FALSE<br>若变量存在且其值为NULL，也返回 FALSE<br>若变量存在且值不为NULL，则返回 TURE<br>同时检查多个变量时，每个单项都符合上一条要求时才返回 TRUE，否则结果为 FALSE </p>
+<p>empty()：<br>若变量不存在则返回 TRUE<br>若变量存在且其值为””、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象，则返回 TURE<br>若变量存在且值不为””、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象，则返回 FALSE</p>
+<h1 id="开发中应该注意哪些安全机制"><a href="#开发中应该注意哪些安全机制" class="headerlink" title="开发中应该注意哪些安全机制"></a>开发中应该注意哪些安全机制</h1><p>1.PHP配置<br>2.Sql注入，<br>3.Xss攻击（cross site script 跨站脚本），<br>4.盗链，<br>5.CSRF（跨站请求伪造cross site request forgery），<br>6.CC（是利用不断对网站发送连接请求致使形成拒绝服务的目的）</p>
+<h1 id="大致说出浏览器通过-URL-访问的原理流程"><a href="#大致说出浏览器通过-URL-访问的原理流程" class="headerlink" title="大致说出浏览器通过 URL 访问的原理流程"></a>大致说出浏览器通过 URL 访问的原理流程</h1><p>1.键盘或触屏输入URL并回车确认<br>2.URL解析&#x2F;DNS解析查找域名IP地址<br>3.网络连接发起HTTP请求<br>4.HTTP报文传输过程<br>5.服务器接收数据<br>6.服务器响应请求&#x2F;MVC<br>7.服务器返回数据<br>8.客户端接收数据<br>9.浏览器加载&#x2F;渲染页面<br>10.打印绘制输出</p>
+<h1 id="mysql-fetch-row-和-mysql-fetch-array-的区别"><a href="#mysql-fetch-row-和-mysql-fetch-array-的区别" class="headerlink" title="mysql_fetch_row () 和 mysql_fetch_array () 的区别"></a>mysql_fetch_row () 和 mysql_fetch_array () 的区别</h1><p>mysql_fetch_row() 从和结果标识 data 关联的结果集中取得一行数据并作为数组返回。每个结果的列储存在一个数组的单元中，偏移量从 0 开始。依次调用 mysql_fetch_row() 将返回结果集中的下一行，如果没有更多行则返回 FALSE。                                                     </p>
+<p>mysql_fetch_array() 函数从结果集中取得一行作为关联数组，或数字数组，或二者兼有。</p>
+<p>解释：<br>（1）如果你的表里面有字段a，b，c那么你用mysql_fetch_row()  就返回array（1&#x3D;&gt;a的值，2&#x3D;&gt;b的值，3&#x3D;&gt;c的值）这个时候你读数组的话，只能这样写$array[1],$array[2]才能得到a的值；</p>
+<p>（2）要是用mysql_fetch_array()  就返回array（a&#x3D;&gt;a的值，b&#x3D;&gt;b的值，c&#x3D;&gt;c的值）和 array（1&#x3D;&gt;a的值，2&#x3D;&gt;b的值，3&#x3D;&gt;c的值）这个时候你读数组的话$array[1]和$array[a]都能得到a的值</p>
+<h1 id="mvc框架的生命周期说一下"><a href="#mvc框架的生命周期说一下" class="headerlink" title="mvc框架的生命周期说一下"></a>mvc框架的生命周期说一下</h1><ul>
+<li>model：存放向数据库请求来的数据</li>
+<li>view：存放组件、图片、页面模板html文件</li>
+<li>controller：获取或改变model里的数据返回给页面渲染数据</li>
+</ul>
+<p>用户请求进来，先加载配置文件，框架初始化，然后匹配路由地址，寻找到对应的controller的文件地址，引入加载文件，实例化controller，根据路由匹配得到的方法和参数，调用并传参到方法，此处可能需要读取db，model层则负责数据库存取，提供封装好的方法给到controller层调用，controller层得到数据后，通过引入view层文件，传递数据到view层，渲染html模板后输出。</p>
+<h1 id="session与cookie"><a href="#session与cookie" class="headerlink" title="session与cookie"></a>session与cookie</h1><p>1、保持状态：</p>
+<p>cookie和session都是用来跟踪浏览器用户身份的会话方式。<br>2、使用方式：<br>（1）cookie机制：如果不在浏览器中设置过期时间，cookie被保存在内存中，生命周期随浏览器的关闭而结束，这种cookie简称会话cookie。如果在浏览器中设置了cookie的过期时间，cookie被保存在硬盘中，关闭浏览器后，cookie数据仍然存在，直到过期时间结束才消失。</p>
+<p>Cookie是服务器发给客户端的特殊信息，cookie是以文本的方式保存在客户端，每次请求时都带上它</p>
+<p>（2）session机制：当服务器收到请求需要创建session对象时，首先会检查客户端请求中是否包含sessionid。如果有sessionid，服务器将根据该id返回对应session对象。如果客户端请求中没有sessionid，服务器会创建新的session对象，并把sessionid在本次响应中返回给客户端。通常使用cookie方式存储sessionid到客户端，在交互中浏览器按照规则将sessionid发送给服务器。如果用户禁用cookie，则要使用URL重写，可以通过response.encodeURL(url) 进行实现；API对encodeURL的结束为，当浏览器支持Cookie时，url不做任何处理；当浏览器不支持Cookie的时候，将会重写URL将SessionID拼接到访问地址后。</p>
+<p>3、存储内容：</p>
+<p>cookie只能保存字符串类型，以文本的方式；session通过类似与Hashtable的数据结构来保存，能支持任何类型的对象(session中可含有多个对象)</p>
+<p>4、存储的大小：</p>
+<p>cookie：单个cookie保存的数据不能超过4kb；</p>
+<p>session大小没有限制。</p>
+<p>5、安全性：</p>
+<p>cookie：针对cookie所存在的攻击：Cookie欺骗，Cookie截获；<br>session的安全性大于cookie。</p>
+<h1 id="为什么session的安全性大于cookie？"><a href="#为什么session的安全性大于cookie？" class="headerlink" title="为什么session的安全性大于cookie？"></a>为什么session的安全性大于cookie？</h1><ol>
+<li>sessionID存储在cookie中，若要攻破session首先要攻破cookie；</li>
+<li>sessionID是要有人登录，或者启动session_start才会有，所以攻破cookie也不一定能得到sessionID；</li>
+<li>第二次启动session_start后，前一次的sessionID就是失效了，session过期后，sessionID也随之失效。</li>
+<li>sessionID是加密的</li>
+<li>综上所述，攻击者必须在短时间内攻破加密的sessionID，这很难。</li>
+</ol>
+<h1 id="session与cookie的应用场景有哪些？"><a href="#session与cookie的应用场景有哪些？" class="headerlink" title="session与cookie的应用场景有哪些？"></a>session与cookie的应用场景有哪些？</h1><p>cookie：<br>（1）判断用户是否登陆过网站，以便下次登录时能够实现自动登录（或者记住密码）。如果我们删除cookie，则每次登录必须从新填写登录的相关信息。<br>（2）保存上次登录的时间等信息。<br>（3）保存上次查看的页面。<br>（4）浏览计数。</p>
+<p>session：</p>
+<p>Session用于保存每个用户的专用信息，变量的值保存在服务器端，通过SessionID来区分不同的客户。</p>
+<p>（1）网上商城中的购物车。<br>（2）保存用户登录信息。<br>（3）将某些数据放入session中，供同一用户的不同页面使用。<br>（4）防止用户非法登录。</p>
+<h1 id="php7新特性"><a href="#php7新特性" class="headerlink" title="php7新特性"></a>php7新特性</h1><p>标量类型声明<br>返回值类型声明<br>语法糖：null合并运算符，太空船操作符<br>define允许定义常量数组，<br>匿名类，<br>新增了一些函数intdiv()，随机函数，</p>
+<p><strong>1、php7.0相比于php5.6的新特性</strong></p>
+<p>参考：<a target="_blank" rel="noopener" href="http://php.net/manual/zh/migration70.new-features.php">http://php.net/manual/zh/migration70.new-features.php</a></p>
+<p><strong>2、php7.1相对于php7.0的新特性</strong></p>
+<p>参考：<a target="_blank" rel="noopener" href="http://php.net/manual/zh/migration71.new-features.php">http://php.net/manual/zh/migration71.new-features.php</a></p>
+<p><strong>3、php7.2相对于php7.1的新特性</strong></p>
+<p>参考：<a target="_blank" rel="noopener" href="http://php.net/manual/zh/migration72.new-features.php">http://php.net/manual/zh/migration72.new-features.php</a></p>
+<h1 id="php8新特性"><a href="#php8新特性" class="headerlink" title="php8新特性"></a>php8新特性</h1><p>新增联合类型（Union Types）；<br>添加了 WeakMap；<br>添加了 ValueError 类；<br>新增的特性大多是语法糖，主要是JIT。</p>
+<p>JIT是一种编译器策略，它将代码表述为一种中间状态，在运行时将其转换为依赖于体系结构的机器码，并即时执行，在PHP8中，Zend VM不需要解释某些操作码，并且这些指令将直接作为CPU级指令执行。</p>
+<p><strong>IT和opcache区别</strong></p>
+<p>要说明opcode cache与JIT的区别，得先明白，<strong>字节码，又叫中间码与机器码的区别。</strong></p>
+<p>简答的说，提升php执行效率，更快了。</p>
+<p>JIT参考<a target="_blank" rel="noopener" href="https://www.laruence.com/2020/06/27/5963.html">鸟哥博客</a></p>
+<h1 id="php垃圾回收机制"><a href="#php垃圾回收机制" class="headerlink" title="php垃圾回收机制"></a>php垃圾回收机制</h1><blockquote>
+<p>关键词：使用了引用计数器</p>
+</blockquote>
+<ol>
+<li>PHP可以自动进行内存管理,清除不需要的对象,主要使用了引用计数。</li>
+<li>在zval结构体中定义了ref_count和is_ref , ref_count是引用计数 ,标识此zval被多少个变量引用 , 为0时会被销毁 。<br>is_ref标识是否使用的 &amp;取地址符强制引用。</li>
+<li>为了解决循环引用内存泄露问题 , 使用同步周期回收算法。</li>
+<li>当数组或对象循环的引用自身 , unset掉数组的时候 , 当refcount-1后还大于0的 , 就会被当成疑似垃圾 , 会进行遍历 ,并且模拟的删除一次refcount-1如果是0就删除 ,如果不是0就恢复。</li>
+</ol>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.php.net/manual/zh/features.gc.php">https://www.php.net/manual/zh/features.gc.php</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/05/15/PHP%E9%9D%A2%E8%AF%95%E9%A2%98/" data-id="cmajb6h6u0000coum4tekau7u" data-title="PHP面试题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/05/15/PHP%E7%AC%94%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PHP笔试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/05/14/PHP%E7%9A%84%E9%AD%94%E6%9C%AF%E5%B8%B8%E9%87%8F%EF%BC%88%E5%8F%98%E9%87%8F%EF%BC%89%E3%80%81%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89%E3%80%81%E8%B6%85%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PHP的魔术常量（变量）、魔术方法（函数）、超全局变量</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">May 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/05/15/Memcached%E9%9D%A2%E8%AF%95%E9%A2%98/">Memcached面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/">Redis面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/Nginx%E9%9D%A2%E8%AF%95%E9%A2%98/">Nginx面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">MySQL面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2025/05/15/%E9%9D%A2%E8%AF%95/">面试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
